@@ -2,6 +2,169 @@ import Head from "next/head";
 import styled from "styled-components";
 
 export default function Home() {
+  const lostItems = [
+    {
+      name: "Key",
+      description: "Silver Key",
+      img: "public/assets/lostItems/one.jpeg",
+      id: 1,
+    },
+    {
+      name: "Headphones",
+      description: "Silver and grey Headphones",
+      img: "public/assets/lostItems/two.jpeg",
+      id: 2,
+    },
+    {
+      name: "Teapot",
+      description: "Red and orange Teapot",
+      img: "public/assets/lostItems/three.jpeg",
+      id: 3,
+    },
+    {
+      name: "Lighter",
+      description: "White, silver and lightblue Lighter",
+      img: "public/assets/lostItems/four.jpeg",
+      id: 4,
+    },
+    {
+      name: "Batteries",
+      description: "Yellow Batteries",
+      img: "public/assets/lostItems/five.jpeg",
+      id: 5,
+    },
+    {
+      name: "Compass",
+      description: "Golden Compass",
+      img: "public/assets/lostItems/six.jpeg",
+      id: 6,
+    },
+    {
+      name: "Bottle",
+      description: "Orange Bottle",
+      img: "public/assets/lostItems/seven.jpeg",
+      id: 7,
+    },
+    {
+      name: "Camera",
+      description: "Black and silver analog Camera",
+      img: "public/assets/lostItems/eight.jpeg",
+      id: 8,
+    },
+    {
+      name: "Backpack",
+      description: "Black and brown backpack found in the woods",
+      img: "public/assets/lostItems/nine.jpeg",
+      id: 9,
+    },
+    {
+      name: "Camera lens",
+      description: "Black and silver camera lens",
+      img: "public/assets/lostItems/ten.jpeg",
+      id: 10,
+    },
+    {
+      name: "Lollipop",
+      description: "Red lollipop",
+      img: "public/assets/lostItems/eleven.jpeg",
+      id: 11,
+    },
+    {
+      name: "Band aid",
+      description: "Red and white band aid box",
+      img: "public/assets/lostItems/twelve.jpeg",
+      id: 12,
+    },
+    {
+      name: "Kids bike",
+      description: "Blue, yellow, white and red kids bike",
+      img: "public/assets/lostItems/thirteen.jpeg",
+      id: 13,
+    },
+  ];
+
+  const foundItems = [
+    {
+      name: "Camera",
+      description: "Camera underwater",
+      img: "public/assets/foundItems/one.jpg",
+      id: 1,
+    },
+    {
+      name: "Backpack",
+      description: "Green and black backpack found in the woods",
+      img: "public/assets/foundItems/two.jpg",
+      id: 2,
+    },
+    {
+      name: "Diamonds",
+      description: "We found a ton of diamonds!!!",
+      img: "public/assets/foundItems/three.jpeg",
+      id: 3,
+    },
+    {
+      name: "One shoe",
+      description: "Found one shoe. Where might the other one be?",
+      img: "public/assets/foundItems/four.jpeg",
+      id: 4,
+    },
+    {
+      name: "Ring",
+      description: "Found the most beautiful ring with blue stone attached",
+      img: "public/assets/foundItems/five.jpeg",
+      id: 5,
+    },
+    {
+      name: "Key",
+      description: "Ancient Key found in the Woods",
+      img: "public/assets/foundItems/six.jpeg",
+      id: 6,
+    },
+    {
+      name: "Keyboard",
+      description: "Oldschool Keyboard with Keys missing",
+      img: "public/assets/foundItems/seven.jpeg",
+      id: 7,
+    },
+    {
+      name: "Shoe",
+      description: "Found one shoe in an abandoned building",
+      img: "public/assets/foundItems/eight.jpeg",
+      id: 8,
+    },
+    {
+      name: "Handshoe",
+      description: "One handshoe found on a parking bench",
+      img: "public/assets/foundItems/nine.jpeg",
+      id: 9,
+    },
+    {
+      name: "Camera",
+      description: "Black camera found in the woods",
+      img: "public/assets/foundItems/ten.jpeg",
+      id: 10,
+    },
+    {
+      name: "Football",
+      description: "Found a football",
+      img: "public/assets/foundItems/eleven.jpeg",
+      id: 11,
+    },
+    {
+      name: "Golden coins",
+      description: "Found some golden coins. Wont give em back.",
+      img: "public/assets/foundItems/twelve.jpeg",
+      id: 12,
+    },
+    {
+      name: "Golden Jewelry",
+      description:
+        "Found jewelry and intend to keep it. Just posting here for recognition.",
+      img: "public/assets/foundItems/thirteen.jpeg",
+      id: 13,
+    },
+  ];
+
   return (
     <div>
       <Head>
