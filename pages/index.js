@@ -1,5 +1,9 @@
 import Head from "next/head";
 import styled from "styled-components";
+import LostItem from "../components/LostItem";
+import SearchbarLostItem from "../components/SearchbarLostItem";
+import FoundItem from "../components/LostItem";
+import { lostItems, foundItems } from "../components/Db";
 
 export default function Home() {
   return (
@@ -12,6 +16,30 @@ export default function Home() {
 
       <Main>
         <h1>My App</h1>
+        <SearchbarLostItem />
+        <ul>
+          {lostItems.map((lostItem) => (
+            <LostItem
+              name={lostItem.name}
+              description={lostItem.description}
+              img={lostItem.img}
+              key={lostItem.id}
+              id={lostItem.id}
+            />
+          ))}
+        </ul>
+        <h2>Second Array of Dummy Data begins here:</h2>
+        <ul>
+          {foundItems.map((foundItem) => (
+            <FoundItem
+              name={foundItem.name}
+              description={foundItem.description}
+              img={foundItem.img}
+              key={foundItem.id}
+              id={foundItem.id}
+            />
+          ))}
+        </ul>
       </Main>
     </div>
   );
