@@ -1,14 +1,11 @@
 import Head from "next/head";
 import styled from "styled-components";
 import LostItem from "../components/LostItem";
+import SearchbarLostItem from "../components/SearchbarLostItem";
 import FoundItem from "../components/LostItem";
 import { lostItems, foundItems } from "../components/Db";
-import { useState } from "react";
 
 export default function Home() {
-  const [search1, setSearch1] = useState("");
-  const [search2, setSearch2] = useState("");
-
   return (
     <div>
       <Head>
@@ -19,48 +16,29 @@ export default function Home() {
 
       <Main>
         <h1>My App</h1>
-        <div>
-          <h4>Search1</h4>
-          <input
-            placeholder="What are you looking for?"
-            onChange={(event) => setSearch1(event.target.value)}
-          ></input>
-        </div>
+        <SearchbarLostItem />
         <ul>
-          {lostItems
-            .filter((lostItem) => lostItem.name.toLowerCase().includes(search1))
-            .map((lostItem) => (
-              <LostItem
-                name={lostItem.name}
-                description={lostItem.description}
-                img={lostItem.img}
-                key={lostItem.id}
-                id={lostItem.id}
-              />
-            ))}
+          {lostItems.map((lostItem) => (
+            <LostItem
+              name={lostItem.name}
+              description={lostItem.description}
+              img={lostItem.img}
+              key={lostItem.id}
+              id={lostItem.id}
+            />
+          ))}
         </ul>
         <h2>Second Array of Dummy Data begins here:</h2>
-        <div>
-          <h4>Search2</h4>
-          <input
-            placeholder="What are you looking for?"
-            onChange={(event) => setSearch2(event.target.value)}
-          ></input>
-        </div>
         <ul>
-          {foundItems
-            .filter((foundItem) =>
-              foundItem.name.toLowerCase().includes(search2)
-            )
-            .map((foundItem) => (
-              <FoundItem
-                name={foundItem.name}
-                description={foundItem.description}
-                img={foundItem.img}
-                key={foundItem.id}
-                id={foundItem.id}
-              />
-            ))}
+          {foundItems.map((foundItem) => (
+            <FoundItem
+              name={foundItem.name}
+              description={foundItem.description}
+              img={foundItem.img}
+              key={foundItem.id}
+              id={foundItem.id}
+            />
+          ))}
         </ul>
       </Main>
     </div>
