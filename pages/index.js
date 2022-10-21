@@ -39,15 +39,13 @@ export default function Home() {
               lostItem.name.toLowerCase().includes(searchTerm1)
             )
             .map((lostItem) => (
-              <Link href={`/details/${lostItem.id}`} key={lostItem.id}>
-                <LostItem
-                  name={lostItem.name}
-                  description={lostItem.description}
-                  img={lostItem.img}
-                  key={lostItem.id}
-                  id={lostItem.id}
-                />
-              </Link>
+              <LostItem
+                name={lostItem.name}
+                description={lostItem.description}
+                img={lostItem.img}
+                key={lostItem.id}
+                id={lostItem.id}
+              />
             ))}
         </ul>
         <h2>Second Array of Dummy Data begins here:</h2>

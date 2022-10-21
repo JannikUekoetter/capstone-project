@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function LostItem({ name, description, img, id }) {
   return (
-    <div>
+    <Link href={`/details/${id}`}>
       <li>
         This item is: {name}. Its description is: {description}. Its ID is: {id}
         . It looks like:
@@ -19,7 +20,7 @@ export default function LostItem({ name, description, img, id }) {
           />
         </ImageContainer>
       </li>
-    </div>
+    </Link>
   );
 }
 
