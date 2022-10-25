@@ -1,12 +1,23 @@
-import { useRouter } from "next/router";
+import { getItemByDatabaseId, lostItems } from "../../components/Db";
 
-function ItemDetail() {
-  const router = useRouter();
-  const itemdetailsId = router.query.id;
+export function getServerSideProps(context) {
+  console.log("test");
+  return { props: { id: context.query.id } };
+}
+
+function ItemDetail({ id }) {
+  const detailItem = getItemByDatabaseId(id);
+  if (!detailItem) return <p> loading... </p>;
+
   return (
-    <h1>
-      Detail Page is working with dynamic IDs. This ID is: {itemdetailsId}.
-    </h1>
+    <>
+      <h1>
+        Detail Page is working with dynamic IDs. This ID is: {detailItem.id}.
+      </h1>
+      <p>{detailItem.id}</p>
+      <p>{detailItem.name}</p>
+      <p>{detailItem.description}</p>
+    </>
   );
 }
 
