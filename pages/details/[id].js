@@ -25,18 +25,12 @@ export function ItemDetail({ id }) {
         layout="fill"
         alt="lost items"
       />
+      <br />
+      <p>Location: {detailItem.location}</p>
+      <button> Make Contact</button>
     </>
   );
 }
-
-<p>
-  Non enim reprehenderit dolor sint dolor deserunt consequat ipsum incididunt
-  anim velit culpa anim. Ad dolore officia consectetur eu irure. Et dolore
-  deserunt minim reprehenderit qui nulla tempor reprehenderit cupidatat. Ut duis
-  ullamco labore minim voluptate consequat adipisicing. Elit pariatur cupidatat
-  adipisicing minim quis culpa ex esse. Occaecat culpa duis nisi mollit sunt
-  occaecat culpa esse commodo.
-</p>;
 
 /* Hier entsteht der Versuch auch das zweite Array aus Items darzustellen. Also ID 13-26. */
 
