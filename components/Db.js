@@ -165,4 +165,8 @@ function getItemByDatabaseId(id) {
   return lostItems.find((lostItem) => lostItem.id === id);
 }
 
-export { lostItems, foundItems, getItemByDatabaseId };
+function getItemByDatabaseIdv2(id) {
+  return foundItems.find((foundItem) => foundItem.id === id);
+}
+
+export { lostItems, foundItems, getItemByDatabaseId, getItemByDatabaseIdv2 };

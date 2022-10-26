@@ -7,8 +7,6 @@ export default function FoundItem({ name, description, img, id }) {
   return (
     <>
       <li>
-        This item is: {name}. Its description is: {description}. Its ID is: {id}
-        . It looks like:
         <ImageContainer>
           <Link href={`/details/${id}`}>
             <Image
@@ -26,7 +24,7 @@ export default function FoundItem({ name, description, img, id }) {
   );
 }
 
-const ImageContainer = styled.div`
+const ImageContainer = styled.li`
   text-align: center;
   width: 200px;
   height: 200px;
