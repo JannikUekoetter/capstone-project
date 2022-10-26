@@ -4,6 +4,7 @@ import LostItem from "../components/LostItem";
 import FoundItem from "../components/LostItem";
 import { lostItems, foundItems } from "../components/Db";
 import { useState } from "react";
+import AddLostItem from "../components/AddLostItem";
 
 export default function Home() {
   const [searchTerm1, setSearchTerm1] = useState("");
@@ -75,6 +76,7 @@ export default function Home() {
               />
             ))}
         </ul>
+        <AddLostItem />
       </Main>
     </>
   );
