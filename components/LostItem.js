@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function LostItem({ name, description, img, id }) {
   return (
-    <Link href={`/details/${id}`}>
-      <li>
-        This item is: {name}. Its description is: {description}. Its ID is: {id}
-        . It looks like:
-        <ImageContainer>
+    <li>
+      This item is: {name}. Its description is: {description}. Its ID is: {id}.
+      It looks like:
+      <ImageContainer>
+        <Link href={`/details/${id}`}>
           <Image
             objectFit="cover"
             src={img}
@@ -18,9 +18,9 @@ export default function LostItem({ name, description, img, id }) {
             layout="fill"
             alt="lost items"
           />
-        </ImageContainer>
-      </li>
-    </Link>
+        </Link>
+      </ImageContainer>
+    </li>
   );
 }
 
