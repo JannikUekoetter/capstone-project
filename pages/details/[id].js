@@ -2,6 +2,8 @@ import {
   getItemByDatabaseId,
   getItemByDatabaseIdv2,
 } from "../../components/Db";
+import Image from "next/image";
+import styled from "styled-components";
 
 export function getServerSideProps(context) {
   return { props: { id: context.query.id } };
@@ -13,14 +15,28 @@ export function ItemDetail({ id }) {
 
   return (
     <>
-      <h1>
-        Detail Page is working with dynamic IDs. This ID is: {detailItem.id}.
-      </h1>
-      <p>Name: {detailItem.name}</p>
+      <h1>Name: {detailItem.name}</h1>
       <p>Description: {detailItem.description}</p>
+      <StyledImage
+        objectFit="cover"
+        src={detailItem.img}
+        width={200}
+        heigth={200}
+        layout="fill"
+        alt="lost items"
+      />
     </>
   );
 }
+
+<p>
+  Non enim reprehenderit dolor sint dolor deserunt consequat ipsum incididunt
+  anim velit culpa anim. Ad dolore officia consectetur eu irure. Et dolore
+  deserunt minim reprehenderit qui nulla tempor reprehenderit cupidatat. Ut duis
+  ullamco labore minim voluptate consequat adipisicing. Elit pariatur cupidatat
+  adipisicing minim quis culpa ex esse. Occaecat culpa duis nisi mollit sunt
+  occaecat culpa esse commodo.
+</p>;
 
 /* Hier entsteht der Versuch auch das zweite Array aus Items darzustellen. Also ID 13-26. */
 
@@ -38,5 +54,12 @@ export function ItemDetail2({ id }) {
     </>
   );
 }
+
+const StyledImage = styled.img`
+  border-radius: 2em;
+  width: 200px;
+  height: 200px;
+  position: relative;
+`;
 
 export default ItemDetail;
