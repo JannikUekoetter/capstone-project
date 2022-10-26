@@ -10,11 +10,11 @@ export default function AddLostItem() {
       <br />
       <label>
         <br />
-        <input placeholder="Location"></input>
+        <input placeholder="Location" />
       </label>
       <br />
       <label>
-        <input placeholder="Add Photo"></input>
+        <input type="media" placeholder="Add Photo" />
       </label>
       <br />
       <br />

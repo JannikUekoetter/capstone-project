@@ -76,7 +76,6 @@ export default function Home() {
               />
             ))}
         </ul>
-        <AddLostItem />
       </Main>
     </>
   );
