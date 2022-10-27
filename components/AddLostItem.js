@@ -3,24 +3,22 @@ import styled from "styled-components";
 import { useState } from "react";
 import { lostItems } from "./Db";
 import { nanoid } from "nanoid";
+import Image from "next/image";
 
 export default function AddLostItem() {
   const [description, setDescription] = useState("");
   const [location, setLocation] = useState("");
   const [name, setName] = useState("");
   const [lost, setLost] = useState(lostItems);
-  // hier brauche ich noch einen state für den photo upload
+  const [img, setImage] = useState("/assets/MrBean.png");
+
   const randomId = nanoid();
 
   const handleClick = (event) => {
     event.preventDefault();
-
-    const newLostItem = { name, description, location, randomId };
+    const newLostItem = { name, description, location, img, randomId };
     setLost((lostItems) => [...lostItems, newLostItem]);
-
-    console.log(lost);
   };
-
   return (
     <>
       <StyledForm onSubmit={handleClick}>
@@ -39,7 +37,6 @@ export default function AddLostItem() {
           </label>
           <br />
           <br />
-
           <StyledTextarea
             type="text"
             key="description"
@@ -77,7 +74,6 @@ export default function AddLostItem() {
           name="picture"
           accept="image/png, image/jpeg"
         />
-
         <br />
         <br />
         <br />
@@ -87,9 +83,19 @@ export default function AddLostItem() {
         {lost.map((lost) => {
           return (
             <div key={lost.randomId}>
-              <p>{lost.name}</p>
+              <p>Item name:</p>
+              {lost.name}
+              <p>Description:</p>
               <p>{lost.description}</p>
-              <p>{lost.randomId}</p>
+              <StyledImage
+                src={lost.img}
+                alt="image"
+                objectFit="cover"
+                width={200}
+                heigth={200}
+                layout="fill"
+                onChange={(event) => setImage(event.target.value)}
+              />
             </div>
           );
         })}
@@ -110,5 +116,12 @@ const StyledTextarea = styled.textarea`
 const StyledNewItems = styled.div`
   border-radius: 1em;
   text-align: center;
+  position: relative;
+`;
+
+const StyledImage = styled.img`
+  border-radius: 2em;
+  width: 200px;
+  height: 200px;
   position: relative;
 `;
