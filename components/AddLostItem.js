@@ -2,23 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { lostItems } from "./Db";
-import { nanoid } from "nanoid";
-import Image from "next/image";
 
 export default function AddLostItem() {
-  const [description, setDescription] = useState("");
-  const [location, setLocation] = useState("");
-  const [name, setName] = useState("");
   const [lost, setLost] = useState(lostItems);
-  const [img, setImage] = useState("/assets/MrBean.png");
-
-  const randomId = nanoid();
 
   const handleClick = (event) => {
     event.preventDefault();
-    const newLostItem = { name, description, location, img, randomId };
-    setLost((lostItems) => [...lostItems, newLostItem]);
+    const formdata = new FormData(event.target);
+    const data = Object.fromEntries(formdata);
+    const newLostItem = {
+      ...data,
+      id: Math.random().toString(36).substring(2),
+    };
+    setLost((prevLost) => [newLostItem, ...prevLost]);
   };
+
   return (
     <>
       <StyledForm onSubmit={handleClick}>
@@ -26,41 +24,24 @@ export default function AddLostItem() {
         <label>
           <h2>Tell us more</h2>
           <label htmlFor="name">
-            <input
-              key="name"
-              type="text"
-              placeholder="Name"
-              required
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-            />
+            <input name="name" type="text" placeholder="Name" required />
           </label>
           <br />
           <br />
           <StyledTextarea
             type="text"
-            key="description"
-            htmlFor="description"
+            name="description"
             placeholder="Description"
             rows="15"
             cols="35"
             required
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
           />
         </label>
         <br />
         <label htmlFor="location">
           <br />
           <h3>Whats your location?</h3>
-          <input
-            key="location"
-            type="text"
-            placeholder="Location"
-            required
-            value={location}
-            onChange={(event) => setLocation(event.target.value)}
-          />
+          <input name="location" type="text" placeholder="Location" required />
           <br />
         </label>
         <br />
@@ -68,11 +49,11 @@ export default function AddLostItem() {
           <h4>Upload a Picture</h4>
         </label>
         <input
-          key="picture"
+          name="picture"
           type="file"
           id="picture"
-          name="picture"
           accept="image/png, image/jpeg"
+          onChange={setLost.img}
         />
         <br />
         <br />
@@ -80,21 +61,20 @@ export default function AddLostItem() {
         <button type="submit">Submit</button>
       </StyledForm>
       <StyledNewItems>
-        {lost.map((lost) => {
+        {lost.map((setLost) => {
           return (
-            <div key={lost.randomId}>
+            <div key={setLost.id}>
               <p>Item name:</p>
-              {lost.name}
+              {setLost.name}
               <p>Description:</p>
-              <p>{lost.description}</p>
+              <p>{setLost.description}</p>
               <StyledImage
-                src={lost.img}
+                src={setLost.img}
                 alt="image"
                 objectFit="cover"
                 width={200}
                 heigth={200}
                 layout="fill"
-                onChange={(event) => setImage(event.target.value)}
               />
             </div>
           );
