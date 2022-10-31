@@ -2,9 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 import { lostItems } from "./Db";
+import { useStore } from "../store/useStore";
+import { useRouter } from "next/router";
 
 export default function AddLostItem() {
-  const [lost, setLost] = useState(lostItems);
+  // const [lost, setLost] = useState(lostItems);
+
+  const addLostItem = useStore((state) => state.addLostItem);
+  const router = useRouter();
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -14,7 +19,9 @@ export default function AddLostItem() {
       ...data,
       id: Math.random().toString(36).substring(2),
     };
-    setLost((prevLost) => [newLostItem, ...prevLost]);
+    //setLost((prevLost) => [newLostItem, ...prevLost]);
+    addLostItem(newLostItem);
+    router.push("/");
   };
 
   return (
@@ -48,19 +55,19 @@ export default function AddLostItem() {
         <label htmlFor="picture">
           <h4>Upload a Picture</h4>
         </label>
-        <input
+        {/* <input
           name="picture"
           type="file"
           id="picture"
           accept="image/png, image/jpeg"
           onChange={setLost.img}
-        />
+        /> */}
         <br />
         <br />
         <br />
         <button type="submit">Submit</button>
       </StyledForm>
-      <StyledNewItems>
+      {/* <StyledNewItems>
         {lost.map((setLost) => {
           return (
             <div key={setLost.id}>
@@ -79,7 +86,7 @@ export default function AddLostItem() {
             </div>
           );
         })}
-      </StyledNewItems>
+      </StyledNewItems> */}
     </>
   );
 }
