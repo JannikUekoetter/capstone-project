@@ -9,7 +9,7 @@ export default function BurgerMenu() {
     <div>
       <h1>
         <Image
-          src="/assets/logo/Logo_1.png"
+          src="/assets/logo/Logo_1.png "
           width={60}
           height={45}
           alt="logo"

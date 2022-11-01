@@ -1,6 +1,7 @@
 import { getItemByDatabaseId, getItemByDatabaseIdv2 } from "../../services/Db";
 import Image from "next/image";
 import styled from "styled-components";
+import Link from "next/link";
 
 export function getServerSideProps(context) {
   return { props: { id: context.query.id } };
@@ -24,7 +25,9 @@ export function ItemDetail({ id }) {
       />
       <br />
       <p>Location: {detailItem.location}</p>
-      <button> Make Contact</button>
+      <Link href="/contact">
+        <button> Make Contact</button>
+      </Link>
     </>
   );
 }
