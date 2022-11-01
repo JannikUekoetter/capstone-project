@@ -1,13 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useState } from "react";
-import { lostItems } from "./Db";
 import { useStore } from "../store/useStore";
 import { useRouter } from "next/router";
 
 export default function AddLostItem() {
-  // const [lost, setLost] = useState(lostItems);
-
   const addLostItem = useStore((state) => state.addLostItem);
   const router = useRouter();
 
@@ -19,7 +15,6 @@ export default function AddLostItem() {
       ...data,
       id: Math.random().toString(36).substring(2),
     };
-    //setLost((prevLost) => [newLostItem, ...prevLost]);
     addLostItem(newLostItem);
     router.push("/");
   };
@@ -67,26 +62,6 @@ export default function AddLostItem() {
         <br />
         <button type="submit">Submit</button>
       </StyledForm>
-      {/* <StyledNewItems>
-        {lost.map((setLost) => {
-          return (
-            <div key={setLost.id}>
-              <p>Item name:</p>
-              {setLost.name}
-              <p>Description:</p>
-              <p>{setLost.description}</p>
-              <StyledImage
-                src={setLost.img}
-                alt="image"
-                objectFit="cover"
-                width={200}
-                heigth={200}
-                layout="fill"
-              />
-            </div>
-          );
-        })}
-      </StyledNewItems> */}
     </>
   );
 }
@@ -98,17 +73,4 @@ const StyledForm = styled.form`
 
 const StyledTextarea = styled.textarea`
   border-radius: 1em;
-`;
-
-const StyledNewItems = styled.div`
-  border-radius: 1em;
-  text-align: center;
-  position: relative;
-`;
-
-const StyledImage = styled.img`
-  border-radius: 2em;
-  width: 200px;
-  height: 200px;
-  position: relative;
 `;
