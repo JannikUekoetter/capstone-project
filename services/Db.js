@@ -1,5 +1,3 @@
-import { nanoid } from "nanoid";
-
 const lostItems = [
   {
     name: "Key",

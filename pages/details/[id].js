@@ -1,7 +1,4 @@
-import {
-  getItemByDatabaseId,
-  getItemByDatabaseIdv2,
-} from "../../components/Db";
+import { getItemByDatabaseId, getItemByDatabaseIdv2 } from "../../services/Db";
 import Image from "next/image";
 import styled from "styled-components";
 

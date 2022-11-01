@@ -2,12 +2,15 @@ import Head from "next/head";
 import styled from "styled-components";
 import LostItem from "../components/LostItem";
 import FoundItem from "../components/LostItem";
-import { lostItems, foundItems } from "../components/Db";
+import { lostItems, foundItems } from "../services/Db";
 import { useState } from "react";
+import { useStore } from "../store/useStore";
 
 export default function Home() {
   const [searchTerm1, setSearchTerm1] = useState("");
   const [searchTerm2, setSearchTerm2] = useState("");
+
+  const lostItems = useStore((state) => state.lostItems);
 
   return (
     <>
