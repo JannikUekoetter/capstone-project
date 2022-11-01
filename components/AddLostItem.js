@@ -50,13 +50,13 @@ export default function AddLostItem() {
         <label htmlFor="picture">
           <h4>Upload a Picture</h4>
         </label>
-        {/* <input
+        <input
           name="picture"
           type="file"
           id="picture"
           accept="image/png, image/jpeg"
-          onChange={setLost.img}
-        /> */}
+          src="/assets/MrBean.png"
+        />
         <br />
         <br />
         <br />
