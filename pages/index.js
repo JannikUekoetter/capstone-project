@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import LostItem from "../components/LostItem";
-import FoundItem from "../components/LostItem";
+import FoundItem from "../components/FoundItem";
 import { lostItems, foundItems } from "../services/Db";
 import { useState } from "react";
 import { useStore } from "../store/useStore";
@@ -25,12 +25,12 @@ export default function Home() {
       </nav>
       <Main>
         <h1>LOSINGiT</h1>
-
+        <br />
+        <h2>Lost Items</h2>
         <div>
           <label htmlFor="inputSearchBar1">
-            Search
             <br />
-            <input
+            <StyledSearchBar
               id="inputSearchBar1"
               type="text"
               placeholder="What are you looking for?"
@@ -53,12 +53,11 @@ export default function Home() {
               />
             ))}
         </ul>
-        <h2>Second Array of Dummy Data begins here:</h2>
+
         <div>
           <label htmlFor="inputSearchBar2">
-            Search
             <br />
-            <input
+            <StyledSearchBar
               id="inputSearchBar2"
               type="text"
               placeholder="What are you looking for?"
@@ -66,6 +65,7 @@ export default function Home() {
             />
           </label>
         </div>
+        <h1>Found Items</h1>
         <ul>
           {foundItems
             .filter((foundItem) =>
@@ -88,4 +88,12 @@ export default function Home() {
 
 const Main = styled.main`
   text-align: center;
+`;
+
+const StyledSearchBar = styled.input`
+  border-radius: 1em;
+  text-align: center;
+  background-color: whitesmoke;
+  width: 15em;
+  height: 3em;
 `;
