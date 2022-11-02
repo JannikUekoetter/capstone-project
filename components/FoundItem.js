@@ -3,7 +3,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function FoundItem({ name, description, img, id }) {
+export default function FoundItem({ name, img, id }) {
   return (
     <>
       <p>
