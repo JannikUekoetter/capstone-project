@@ -18,7 +18,6 @@ export default function AddFoundItem() {
       };
       addFoundItem(newFoundItem);
       router.push("/");
-      console.log(newFoundItem);
     };
     return (
       <>

@@ -80,7 +80,6 @@ export default function Home() {
                 id={foundItem.id}
               />
             ))}
-          console.log()
         </ul>
       </Main>
     </>

@@ -15,9 +15,8 @@ export default function BurgerMenu() {
           alt="logo"
         ></Image>
       </h1>
-      <h2>
-        <FaAlignJustify />
-      </h2>
+
+      <FaAlignJustify />
 
       <nav>
         <StyledList>
