@@ -25,7 +25,8 @@ export default function Home() {
       </nav>
       <Main>
         <h1>LOSINGiT</h1>
-
+        <br />
+        <h2>Lost Items</h2>
         <div>
           <label htmlFor="inputSearchBar1">
             <br />
@@ -52,7 +53,7 @@ export default function Home() {
               />
             ))}
         </ul>
-        <h2>Second Array of Dummy Data begins here:</h2>
+
         <div>
           <label htmlFor="inputSearchBar2">
             <br />
@@ -64,6 +65,7 @@ export default function Home() {
             />
           </label>
         </div>
+        <h1>Found Items</h1>
         <ul>
           {foundItems
             .filter((foundItem) =>

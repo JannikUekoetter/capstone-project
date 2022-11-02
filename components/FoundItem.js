@@ -7,15 +7,9 @@ export default function FoundItem({ name, description, img, id }) {
   return (
     <>
       <p>
-        Item name:
         <br />
         {name}
         <br />
-        Description:
-        <br />
-        {description}
-        <br />
-        It looks like:
       </p>
       <StyledList>
         <ImageContainer>

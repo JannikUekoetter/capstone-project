@@ -7,11 +7,9 @@ export default function LostItem({ name, description, img, id }) {
   return (
     <>
       <p>
-        Name:
         <br />
         {name}
         <br />
-        It looks like:
       </p>
       <StyledList>
         <ImageContainer>
