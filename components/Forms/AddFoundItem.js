@@ -17,7 +17,7 @@ export default function AddFoundItem() {
         id: Math.random().toString(36).substring(2),
       };
       addFoundItem(newFoundItem);
-      router.push("/");
+      router.push("/searchfound");
     };
     return (
       <>

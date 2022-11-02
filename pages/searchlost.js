@@ -1,6 +1,6 @@
 import React from "react";
-import LostItem from "../components/LostItem";
+import SearchLost from "../components/Search/SearchLost";
 
 export default function searchlost() {
-  return <LostItem />;
+  return <SearchLost />;
 }

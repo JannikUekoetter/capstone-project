@@ -16,7 +16,7 @@ export default function AddLostItem() {
       id: Math.random().toString(36).substring(2),
     };
     addLostItem(newLostItem);
-    router.push("/");
+    router.push("/searchlost");
   };
 
   return (
