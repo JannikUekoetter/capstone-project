@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import LostItem from "../components/LostItem";
-import FoundItem from "../components/LostItem";
+import FoundItem from "../components/FoundItem";
 import { lostItems, foundItems } from "../services/Db";
 import { useState } from "react";
 import { useStore } from "../store/useStore";
@@ -78,6 +78,7 @@ export default function Home() {
                 id={foundItem.id}
               />
             ))}
+          console.log()
         </ul>
       </Main>
     </>

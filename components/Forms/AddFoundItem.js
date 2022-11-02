@@ -23,11 +23,16 @@ export default function AddFoundItem() {
     return (
       <>
         <StyledForm onSubmit={handleClick}>
-          <h1>Lost Something?</h1>
+          <h1>Found Something?</h1>
           <label>
             <h2>Tell us more</h2>
             <label htmlFor="name">
-              <input name="name" type="text" placeholder="Name" required />
+              <StyledNameInput
+                name="name"
+                type="text"
+                placeholder="Name"
+                required
+              />
             </label>
             <br />
             <br />
@@ -44,7 +49,7 @@ export default function AddFoundItem() {
           <label htmlFor="location">
             <br />
             <h3>Whats your location?</h3>
-            <input
+            <StyledLocationInput
               name="location"
               type="text"
               placeholder="Location"
@@ -79,5 +84,13 @@ const StyledForm = styled.form`
 `;
 
 const StyledTextarea = styled.textarea`
+  border-radius: 1em;
+`;
+
+const StyledNameInput = styled.input`
+  border-radius: 1em;
+`;
+
+const StyledLocationInput = styled.input`
   border-radius: 1em;
 `;

@@ -6,27 +6,48 @@ import Link from "next/link";
 export default function FoundItem({ name, description, img, id }) {
   return (
     <>
-      <li>
+      <p>
+        Item name:
+        <br />
+        {name}
+        <br />
+        Description:
+        <br />
+        {description}
+        <br />
+        It looks like:
+      </p>
+      <StyledList>
         <ImageContainer>
-          <Link href={`/details/${id}`}>
-            <Image
+          <Link href={`/details/found/${id}`}>
+            <StyledImage
               objectFit="cover"
               src={img}
               width={200}
               heigth={200}
               layout="fill"
-              alt="lost items"
+              alt="found items"
             />
           </Link>
         </ImageContainer>
-      </li>
+      </StyledList>
     </>
   );
 }
 
 const ImageContainer = styled.li`
   text-align: center;
+`;
+
+const StyledImage = styled.img`
+  border-radius: 2em;
   width: 200px;
   height: 200px;
   position: relative;
+`;
+
+const StyledList = styled.li`
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
 `;

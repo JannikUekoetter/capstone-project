@@ -19,7 +19,7 @@ export default function LostItem({ name, description, img, id }) {
       </p>
       <StyledList>
         <ImageContainer>
-          <Link href={`/details/${id}`}>
+          <Link href={`/details/lost/${id}`}>
             <StyledImage
               objectFit="cover"
               src={img}
