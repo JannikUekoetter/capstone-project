@@ -7,13 +7,9 @@ export default function LostItem({ name, description, img, id }) {
   return (
     <>
       <p>
-        Item name:
+        Name:
         <br />
         {name}
-        <br />
-        Description:
-        <br />
-        {description}
         <br />
         It looks like:
       </p>

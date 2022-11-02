@@ -13,8 +13,7 @@ export function ItemDetail2({ id }) {
 
   return (
     <StyledDiv>
-      <h1>Name: {detailItem2.name}</h1>
-      <p>Description: {detailItem2.description}</p>
+      <h1>{detailItem2.name}</h1>
       <StyledImage
         objectFit="cover"
         src={detailItem2.img}
@@ -23,6 +22,10 @@ export function ItemDetail2({ id }) {
         layout="fill"
         alt="found items"
       />
+      <p>
+        Description: <br /> <br />
+        {detailItem2.description}
+      </p>
       <br />
       <p>Location: {detailItem2.location}</p>
       <Link href="/contact">
