@@ -7,12 +7,21 @@ export default function ContactPage() {
     <StyledContactArea>
       <h1>Make Contact</h1>
       <label htmlFor="name">
-        <input name="name" placeholder="Your Name"></input>
+        <StyledNameInput
+          name="name"
+          placeholder="Your Name"
+          required
+        ></StyledNameInput>
       </label>
       <br />
       <br />
       <label htmlFor="message">
-        <textarea placeholder="What's on your mind?" rows="15" cols="35" />
+        <StyledFormInput
+          placeholder="What's on your mind?"
+          rows="15"
+          cols="35"
+          required
+        />
       </label>
       <br />
       <br />
@@ -27,4 +36,12 @@ export default function ContactPage() {
 
 const StyledContactArea = styled.form`
   text-align: center;
+`;
+
+const StyledNameInput = styled.input`
+  border-radius: 1em;
+`;
+
+const StyledFormInput = styled.textarea`
+  border-radius: 1em;
 `;

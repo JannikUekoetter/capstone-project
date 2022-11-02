@@ -9,11 +9,11 @@ export default function LostItem({ name, description, img, id }) {
       <p>
         Item name:
         <br />
-        {name}.
+        {name}
         <br />
         Description:
         <br />
-        {description}.
+        {description}
         <br />
         It looks like:
       </p>

@@ -12,7 +12,7 @@ export function ItemDetail({ id }) {
   if (!detailItem) return <p> loading... </p>;
 
   return (
-    <>
+    <StyledDiv>
       <h1>Name: {detailItem.name}</h1>
       <p>Description: {detailItem.description}</p>
       <StyledImage
@@ -28,7 +28,7 @@ export function ItemDetail({ id }) {
       <Link href="/contact">
         <button> Make Contact</button>
       </Link>
-    </>
+    </StyledDiv>
   );
 }
 
@@ -36,16 +36,26 @@ export function ItemDetail({ id }) {
 
 export function ItemDetail2({ id }) {
   const detailItem2 = getItemByDatabaseIdv2(id);
-  if (!detailItem2) return <p> loading...2223232 </p>;
+  if (!detailItem2) return <p> loading...23232323 </p>;
 
   return (
-    <>
-      <h1>
-        Detail Page is working with dynamic IDs. This ID is: {detailItem2.id}.
-      </h1>
-      <p>Name: {detailItem2.name}</p>
+    <StyledDiv>
+      <h1>Name: {detailItem2.name}</h1>
       <p>Description: {detailItem2.description}</p>
-    </>
+      <StyledImage
+        objectFit="cover"
+        src={detailItem2.img}
+        width={200}
+        heigth={200}
+        layout="fill"
+        alt="lost items"
+      />
+      <br />
+      <p>Location: {detailItem2.location}</p>
+      <Link href="/contact">
+        <button> Make Contact</button>
+      </Link>
+    </StyledDiv>
   );
 }
 
@@ -54,6 +64,10 @@ const StyledImage = styled.img`
   width: 200px;
   height: 200px;
   position: relative;
+`;
+
+const StyledDiv = styled.div`
+  text-align: center;
 `;
 
 export default ItemDetail;

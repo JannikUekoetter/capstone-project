@@ -28,9 +28,8 @@ export default function Home() {
 
         <div>
           <label htmlFor="inputSearchBar1">
-            Search
             <br />
-            <input
+            <StyledSearchBar
               id="inputSearchBar1"
               type="text"
               placeholder="What are you looking for?"
@@ -56,9 +55,8 @@ export default function Home() {
         <h2>Second Array of Dummy Data begins here:</h2>
         <div>
           <label htmlFor="inputSearchBar2">
-            Search
             <br />
-            <input
+            <StyledSearchBar
               id="inputSearchBar2"
               type="text"
               placeholder="What are you looking for?"
@@ -88,4 +86,12 @@ export default function Home() {
 
 const Main = styled.main`
   text-align: center;
+`;
+
+const StyledSearchBar = styled.input`
+  border-radius: 1em;
+  text-align: center;
+  background-color: whitesmoke;
+  width: 15em;
+  height: 3em;
 `;

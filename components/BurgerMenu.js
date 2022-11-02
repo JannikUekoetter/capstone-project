@@ -1,15 +1,15 @@
 import React from "react";
 import { FaAlignJustify } from "react-icons/fa";
 import Link from "next/link";
-
+import styled from "styled-components";
 import Image from "next/image";
 
 export default function BurgerMenu() {
   return (
-    <div>
+    <StyledDiv>
       <h1>
         <Image
-          src="/assets/logo/Logo_1.png "
+          src="/assets/logo/image2.svg"
           width={60}
           height={45}
           alt="logo"
@@ -18,9 +18,9 @@ export default function BurgerMenu() {
       <h2>
         <FaAlignJustify />
       </h2>
-      <h3>Menu</h3>
+
       <nav>
-        <ul>
+        <StyledList>
           <li>
             <Link href="/searchlost">Search Lost</Link>
           </li>
@@ -33,8 +33,20 @@ export default function BurgerMenu() {
           <li>
             <Link href="/addfound">Add Found</Link>
           </li>
-        </ul>
+        </StyledList>
       </nav>
-    </div>
+    </StyledDiv>
   );
 }
+
+const StyledDiv = styled.div`
+  text-align: left;
+`;
+
+const StyledList = styled.ul`
+  list-style-type: none;
+`;
+
+const StyledBurgerItems = styled.li`
+  text-align: left;
+`;

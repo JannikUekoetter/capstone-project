@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useStore } from "../store/useStore";
+import { useStore } from "../../store/useStore";
 import { useRouter } from "next/router";
 
 export default function AddLostItem() {
