@@ -19,7 +19,7 @@ const positions = [
     lat: 52.520008,
     long: 13.404954,
     location: "Berlin",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "2",
@@ -27,7 +27,7 @@ const positions = [
     lat: 53.564922,
     long: 10.00392,
     location: "Hamburg",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "3",
@@ -35,7 +35,7 @@ const positions = [
     lat: 52.520308,
     long: 13.408254,
     location: "Berlin",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "4",
@@ -43,7 +43,7 @@ const positions = [
     lat: 53.551086,
     long: 9.993682,
     location: "Hamburg",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "5",
@@ -51,7 +51,7 @@ const positions = [
     lat: 48.76738,
     long: 9.205591,
     location: "Stuttgart",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "6",
@@ -59,7 +59,7 @@ const positions = [
     lat: 48.516252,
     long: 9.149923,
     location: "Stuttgart",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "7",
@@ -67,7 +67,7 @@ const positions = [
     lat: 48.474338,
     long: 8.936196,
     location: "Rottenburg am Neckar",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "8",
@@ -75,7 +75,7 @@ const positions = [
     lat: 51.31271,
     long: 9.479746,
     location: "Kassel",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "9",
@@ -83,7 +83,7 @@ const positions = [
     lat: 48.135124,
     long: 11.581981,
     location: "München",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "10",
@@ -91,6 +91,7 @@ const positions = [
     lat: 51.339695,
     long: 12.373075,
     location: "Leipzig",
+    status: "lost",
   },
   {
     id: "11",
@@ -98,7 +99,7 @@ const positions = [
     lat: 51.481468,
     long: 51.481468,
     location: "Halle",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "12",
@@ -106,7 +107,7 @@ const positions = [
     lat: 50.356548,
     long: 7.59942,
     location: "Koblenz",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "13",
@@ -114,7 +115,7 @@ const positions = [
     lat: 52.357235,
     long: 9.751259,
     location: "Hannover",
-    status: "Lost",
+    status: "lost",
   },
   {
     id: "14",
@@ -122,7 +123,7 @@ const positions = [
     lat: 50.827847,
     long: 50.827847,
     location: "Chemnitz",
-    status: "Found",
+    status: "found",
   },
   {
     id: "15",
@@ -130,7 +131,7 @@ const positions = [
     lat: 51.058833,
     long: 13.728651,
     location: "Dresden",
-    status: "Found",
+    status: "found",
   },
   {
     id: "16",
@@ -138,7 +139,7 @@ const positions = [
     lat: 50.122427,
     long: 8.685281,
     location: "Frankfurt am Main",
-    status: "Found",
+    status: "found",
   },
   {
     id: "17",
@@ -146,7 +147,7 @@ const positions = [
     lat: 50.060754,
     long: 8.237295,
     location: "Wiesbaden",
-    status: "Found",
+    status: "found",
   },
   {
     id: "18",
@@ -154,7 +155,7 @@ const positions = [
     lat: 52.02379,
     long: 8.550192,
     location: "Bielefeld",
-    status: "Found",
+    status: "found",
   },
   {
     id: "19",
@@ -162,7 +163,7 @@ const positions = [
     lat: 53.061355,
     long: 8.791523,
     location: "Bremen",
-    status: "Found",
+    status: "found",
   },
   {
     id: "20",
@@ -170,7 +171,7 @@ const positions = [
     lat: 52.268493,
     long: 8.076874,
     location: "Osnabrück",
-    status: "Found",
+    status: "found",
   },
   {
     id: "21",
@@ -178,7 +179,7 @@ const positions = [
     lat: 52.379393,
     long: 13.09791,
     location: "Potsdam",
-    status: "Found",
+    status: "found",
   },
   {
     id: "22",
@@ -186,7 +187,7 @@ const positions = [
     lat: 53.626806,
     long: 11.402587,
     location: "Schwerin",
-    status: "Found",
+    status: "found",
   },
   {
     id: "23",
@@ -194,7 +195,7 @@ const positions = [
     lat: 53.850987,
     long: 10.683004,
     location: "Lübeck",
-    status: "Found",
+    status: "found",
   },
   {
     id: "24",
@@ -202,7 +203,7 @@ const positions = [
     lat: 54.308592,
     long: 10.133887,
     location: "Kiel",
-    status: "Found",
+    status: "found",
   },
   {
     id: "25",
@@ -210,7 +211,7 @@ const positions = [
     lat: 53.537206,
     long: 8.621178,
     location: "Bremerhaven",
-    status: "Found",
+    status: "found",
   },
   {
     id: "26",
@@ -218,7 +219,7 @@ const positions = [
     lat: 48.720324,
     long: 11.466339,
     location: "Ingolstadt",
-    status: "Found",
+    status: "found",
   },
 ];
 
@@ -267,6 +268,22 @@ function LocationMarker() {
 }
 
 export default function Map() {
+  // Entwurf für eine Funktion zum überprüfen der If-Abfrage für die ID
+
+  /* function onCondition(position) {
+    if (position.id < 14) {
+      return (
+        <a href={`/details/found/${position.id}`}>
+          {position.status}:{position.name}
+        </a>
+      );
+    } else {
+      <a href={`/details/lost/${position.id}`}>
+        {position.status}:{position.name}
+      </a>;
+    }
+  } */
+
   return (
     <StyledMapContainer center={[51.235095, 9.682075]} zoom={6} scrollWheelZoom>
       <TileLayer
@@ -281,9 +298,12 @@ export default function Map() {
             position={[position.lat, position.long]}
             icon={goldIcon}
           >
+            {/* Hier wird leider nur das routing zur detail page für found items erreicht.
+            Ich brauche irgendeine if-Abfrage die besagt, dass er "details/found" bei id's
+            zwischen 14-26 verwendet und "details/lost" bei id's zwischen 1-13. */}
             <Popup>
-              <a href={`/details/found/${position.id}`}>
-                {position.status}:{position.name}
+              <a href={`/details/${position.status}/${position.id}`}>
+                {position.status}: {position.name}
               </a>
             </Popup>
           </Marker>
