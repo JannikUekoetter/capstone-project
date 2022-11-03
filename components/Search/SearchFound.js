@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import FoundItem from "../FoundItem";
 import styled from "styled-components";
-import { foundItems } from "../../services/Db";
 import { useStore } from "../../store/useStore";
 
 export default function SearchFound() {

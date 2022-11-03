@@ -1,6 +1,9 @@
 import Head from "next/head";
+import dynamic from "next/dynamic";
 import styled from "styled-components";
 import BurgerMenu from "../components/BurgerMenu";
+
+const Map = dynamic(() => import("../components/Map"), { ssr: false });
 
 export default function Home() {
   return (
@@ -15,6 +18,7 @@ export default function Home() {
       </nav>
       <Main>
         <h1>Welcome to LOSINGiT!</h1>
+        <Map />
       </Main>
     </>
   );
@@ -22,12 +26,4 @@ export default function Home() {
 
 const Main = styled.main`
   text-align: center;
-`;
-
-const StyledSearchBar = styled.input`
-  border-radius: 1em;
-  text-align: center;
-  background-color: whitesmoke;
-  width: 15em;
-  height: 3em;
 `;
