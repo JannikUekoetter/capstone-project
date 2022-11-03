@@ -1,6 +1,6 @@
 import React from "react";
-import FoundItem from "../components/FoundItem";
+import SearchFound from "../components/Search/SearchFound";
 
 export default function searchfound() {
-  return <FoundItem />;
+  return <SearchFound />;
 }
