@@ -18,6 +18,7 @@ export default function Home() {
       </nav>
       <Main>
         <h1>Welcome to LOSINGiT!</h1>
+        <h2>Have you lost or found something? Then check our map!</h2>
         <Map />
       </Main>
     </>
