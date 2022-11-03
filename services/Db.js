@@ -44,7 +44,7 @@ const lostItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/lostItems/six.jpeg",
-    location: "Berlin",
+    location: "Reutlingen",
     id: "6",
   },
   {
@@ -72,11 +72,11 @@ const lostItems = [
     id: "9",
   },
   {
-    name: "Camera lens",
+    name: "Camera Lens",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/lostItems/ten.jpeg",
-    location: "München",
+    location: "Leipzig",
     id: "10",
   },
   {
@@ -84,15 +84,15 @@ const lostItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/lostItems/eleven.jpeg",
-    location: "Stuttgart",
+    location: "Halle",
     id: "11",
   },
   {
-    name: "Band aid",
+    name: "Band Aid",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/lostItems/twelve.jpeg",
-    location: "Hamburg",
+    location: "Koblenz",
     id: "12",
   },
   {
@@ -100,7 +100,7 @@ const lostItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/lostItems/thirteen.jpeg",
-    location: "München",
+    location: "Hannover",
     id: "13",
   },
 ];
@@ -111,7 +111,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/one.jpeg",
-    location: "München",
+    location: "Chemnitz",
     id: "14",
   },
   {
@@ -119,7 +119,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/two.jpeg",
-    location: "Hamburg",
+    location: "Dresden",
     id: "15",
   },
   {
@@ -127,15 +127,15 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/three.jpeg",
-    location: "Stuttgart",
+    location: "Frankfurt am Main",
     id: "16",
   },
   {
-    name: "One shoe",
+    name: "One Shoe",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/four.jpeg",
-    location: "Berlin",
+    location: "Wiesbaden",
     id: "17",
   },
   {
@@ -143,13 +143,14 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/five.jpeg",
+    location: "Bielefeld",
     id: "18",
   },
   {
     name: "Key",
     description: "Ancient Key found in the Woods",
     img: "/assets/foundItems/six.jpeg",
-    location: "Berlin",
+    location: "Bremen",
     id: "19",
   },
   {
@@ -157,7 +158,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/seven.jpeg",
-    location: "München",
+    location: "Osnabrück",
     id: "20",
   },
   {
@@ -165,7 +166,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/eight.jpeg",
-    location: "Stuttgart",
+    location: "Potsdam",
     id: "21",
   },
   {
@@ -173,7 +174,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/nine.jpeg",
-    location: "Berlin",
+    location: "Schwerin",
     id: "22",
   },
   {
@@ -181,6 +182,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/ten.jpeg",
+    location: "Lübeck",
     id: "23",
   },
   {
@@ -188,7 +190,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/eleven.jpeg",
-    location: "Stuttgart",
+    location: "Kiel",
     id: "24",
   },
   {
@@ -196,7 +198,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/twelve.jpeg",
-    location: "Hamburg",
+    location: "Bremerhaven",
     id: "25",
   },
   {
@@ -204,7 +206,7 @@ const foundItems = [
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
     img: "/assets/foundItems/thirteen.jpeg",
-    location: "Hamburg",
+    location: "Ingolstadt",
     id: "26",
   },
 ];
