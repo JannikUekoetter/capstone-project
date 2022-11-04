@@ -11,6 +11,7 @@ export default function FoundItem({ name, img, id }) {
         {name}
         <br />
       </p>
+
       <StyledList>
         <ImageContainer>
           <Link href={`/details/found/${id}`}>
@@ -42,6 +43,4 @@ const StyledImage = styled.img`
 
 const StyledList = styled.li`
   list-style-type: none;
-  display: flex;
-  justify-content: center;
 `;

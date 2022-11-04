@@ -268,22 +268,6 @@ function LocationMarker() {
 }
 
 export default function Map() {
-  // Entwurf für eine Funktion zum überprüfen der If-Abfrage für die ID
-
-  /* function onCondition(position) {
-    if (position.id < 14) {
-      return (
-        <a href={`/details/found/${position.id}`}>
-          {position.status}:{position.name}
-        </a>
-      );
-    } else {
-      <a href={`/details/lost/${position.id}`}>
-        {position.status}:{position.name}
-      </a>;
-    }
-  } */
-
   return (
     <StyledMapContainer center={[51.235095, 9.682075]} zoom={6} scrollWheelZoom>
       <TileLayer
@@ -298,9 +282,6 @@ export default function Map() {
             position={[position.lat, position.long]}
             icon={goldIcon}
           >
-            {/* Hier wird leider nur das routing zur detail page für found items erreicht.
-            Ich brauche irgendeine if-Abfrage die besagt, dass er "details/found" bei id's
-            zwischen 14-26 verwendet und "details/lost" bei id's zwischen 1-13. */}
             <Popup>
               <a href={`/details/${position.status}/${position.id}`}>
                 {position.status}: {position.name}
