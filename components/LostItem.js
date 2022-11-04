@@ -3,14 +3,9 @@ import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function LostItem({ name, img, id }) {
+export default function LostItem({ img, id }) {
   return (
     <>
-      <p>
-        <br />
-        {name}
-        <br />
-      </p>
       <StyledList>
         <ImageContainer>
           <Link href={`/details/lost/${id}`}>

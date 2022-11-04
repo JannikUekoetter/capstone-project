@@ -22,9 +22,12 @@ export function ItemDetail({ id }) {
         layout="fill"
         alt="lost items"
       />
-      <p>
-        Description: <br /> <br /> {detailItem.description}
-      </p>
+      <StyledDescription>
+        <p>
+          Description: <br /> <br /> {detailItem.description}
+        </p>
+      </StyledDescription>
+
       <br />
       <p>Location: {detailItem.location}</p>
       <Link href="/contact">
@@ -36,13 +39,23 @@ export function ItemDetail({ id }) {
 
 const StyledImage = styled.img`
   border-radius: 2em;
-  width: 200px;
-  height: 200px;
+  width: 22em;
+  height: 22em;
   position: relative;
 `;
 
 const StyledDiv = styled.div`
   text-align: center;
+`;
+
+const StyledDescription = styled.p`
+  border: solid;
+  border-color: grey;
+  border-radius: 1em;
+`;
+
+const StyledHeadline = styled.h1`
+  border-bottom: 1px solid red;
 `;
 
 export default ItemDetail;
