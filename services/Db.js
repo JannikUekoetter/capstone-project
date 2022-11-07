@@ -146,7 +146,7 @@ const lostItems = [
     name: "Glasses",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-    img: "/assets/lostItems/fourteen.jpeg",
+    img: "/assets/lostItems/fourteen.jpg",
     lat: 51.715248,
     long: 8.75213,
     location: "Paderborn",
@@ -300,7 +300,7 @@ const foundItems = [
     name: "Compass",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-    img: "/assets/foundItems/fourteen.jpeg",
+    img: "/assets/foundItems/fourteen.jpg",
     lat: 50.606589,
     long: 11.649814,
     location: "Ziegenrück",

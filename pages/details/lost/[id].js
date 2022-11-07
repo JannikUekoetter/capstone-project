@@ -22,20 +22,24 @@ export function ItemDetail({ id }) {
         layout="fill"
         alt="lost items"
       />
-      <StyledDescription>
-        <p>
-          Description: <br /> <br /> {detailItem.description}
-        </p>
-      </StyledDescription>
+      <StyledDivHeadline>Description: </StyledDivHeadline>
+      <StyledDescriptionText>
+        <br /> {detailItem.description}
+      </StyledDescriptionText>
+      <StyledLocationHeadline>Location: </StyledLocationHeadline>
 
+      <p>{detailItem.location}</p>
       <br />
-      <p>Location: {detailItem.location}</p>
       <Link href="/contact">
-        <button> Make Contact</button>
+        <StyledButton> Make Contact</StyledButton>
       </Link>
     </StyledDiv>
   );
 }
+
+const StyledDiv = styled.div`
+  text-align: center;
+`;
 
 const StyledImage = styled.img`
   border-radius: 2em;
@@ -44,18 +48,40 @@ const StyledImage = styled.img`
   position: relative;
 `;
 
-const StyledDiv = styled.div`
+const StyledDivHeadline = styled.p`
   text-align: center;
+  font-size: 1.3em;
 `;
 
-const StyledDescription = styled.p`
-  border: solid;
-  border-color: grey;
-  border-radius: 1em;
+const StyledLocationHeadline = styled.p`
+  text-align: center;
+  font-size: 1.3em;
 `;
 
-const StyledHeadline = styled.h1`
-  border-bottom: 1px solid red;
+const StyledDescriptionText = styled.p`
+  text-align: left;
+  padding-left: 6em;
+  padding-right: 6em;
+`;
+
+const StyledButton = styled.button`
+  position: relative;
+  color: white;
+  border-radius: 0.5em;
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
+  outline: none;
 `;
 
 export default ItemDetail;

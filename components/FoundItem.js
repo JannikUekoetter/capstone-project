@@ -30,11 +30,13 @@ const ImageContainer = styled.li`
 
 const StyledImage = styled.img`
   border-radius: 2em;
-  width: 12em;
-  height: 12em;
+  width: 200px;
+  height: 200px;
   position: relative;
 `;
 
 const StyledList = styled.li`
   list-style-type: none;
+  display: flex;
+  justify-content: center;
 `;
