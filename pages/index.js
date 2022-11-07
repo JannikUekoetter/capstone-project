@@ -18,7 +18,10 @@ export default function Home() {
       </nav>
       <Main>
         <h1>Welcome to LOSINGiT!</h1>
-        <h2>Have you lost or found something? Check our map!</h2>
+        <StyledHeadline>
+          Have you lost or found something? Check our map!
+        </StyledHeadline>
+
         <Map />
       </Main>
     </>
@@ -27,4 +30,9 @@ export default function Home() {
 
 const Main = styled.main`
   text-align: center;
+`;
+
+const StyledHeadline = styled.h1`
+  margin-bottom: 1.5em;
+  font-size: 1.5em;
 `;

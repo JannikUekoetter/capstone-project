@@ -13,7 +13,8 @@ export function ItemDetail2({ id }) {
 
   return (
     <StyledDiv>
-      <h1>{detailItem2.name}</h1>
+      <StyledHeadline>{detailItem2.name}</StyledHeadline>
+      <br />
       <StyledImage
         objectFit="cover"
         src={detailItem2.img}
@@ -22,11 +23,11 @@ export function ItemDetail2({ id }) {
         layout="fill"
         alt="found items"
       />
-      <StyledDivHeadline>Description:</StyledDivHeadline>
+      <StyledDivHeadline>Description</StyledDivHeadline>
       <StyledDescriptionText>{detailItem2.description}</StyledDescriptionText>
       <br />
-      <StyledLocationHeadline>Location: </StyledLocationHeadline>
-      <p>{detailItem2.location}</p>
+      <StyledLocationHeadline>Location </StyledLocationHeadline>
+      <StyledLocationText>{detailItem2.location}</StyledLocationText>
       <Link href="/contact">
         <StyledButton> Make Contact</StyledButton>
       </Link>
@@ -57,14 +58,45 @@ const StyledLocationHeadline = styled.p`
 
 const StyledDescriptionText = styled.p`
   text-align: left;
-  padding-left: 6em;
-  padding-right: 6em;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  margin: 3em;
+  border-radius: 1em;
+  padding: 2em;
+`;
+
+const StyledLocationText = styled.p`
+  text-align: left;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  margin: 3em;
+  border-radius: 1em;
+  padding: 2em;
 `;
 
 const StyledButton = styled.button`
+  all: unset;
+  width: 7em;
+  height: 2em;
   position: relative;
   color: white;
   border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
   background-image: linear-gradient(
     90deg,
     #0065ff,
@@ -78,7 +110,35 @@ const StyledButton = styled.button`
   background-position: 0% 0%;
   font-size: 2em;
   padding: 0.5em;
+
+  &:hover {
+    box-shadow: inset 8em 0 0 0 green;
+  }
+`;
+
+const StyledHeadline = styled.button`
+  all: unset;
+  margin: 3em;
+  width: 7em;
+  height: 2em;
+  position: relative;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
   outline: none;
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
 `;
 
 export default ItemDetail2;

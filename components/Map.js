@@ -298,7 +298,7 @@ export default function Map() {
 
 const StyledMapContainer = styled(MapContainer)`
   height: 60rem;
-  width: 40rem;
+  width: 37rem;
   margin: 0 auto;
   border-radius: 2rem;
 `;
