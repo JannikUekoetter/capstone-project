@@ -64,5 +64,23 @@ const StyledGrid = styled.ul`
 `;
 
 const StyledHeadline = styled.h1`
-  margin: 2em;
+  all: unset;
+  font-size: 14rem;
+  margin: 3em;
+  width: 7em;
+  height: 2em;
+  position: relative;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
 `;

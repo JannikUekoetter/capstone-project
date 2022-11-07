@@ -15,6 +15,7 @@ export function ItemDetail2({ id }) {
     <StyledDiv>
       <StyledHeadline>{detailItem2.name}</StyledHeadline>
       <br />
+
       <StyledImage
         objectFit="cover"
         src={detailItem2.img}
@@ -23,7 +24,10 @@ export function ItemDetail2({ id }) {
         layout="fill"
         alt="found items"
       />
-      <StyledDivHeadline>Description</StyledDivHeadline>
+      <br />
+      <br />
+      <br />
+      <DescriptionHeadline>Description</DescriptionHeadline>
       <StyledDescriptionText>{detailItem2.description}</StyledDescriptionText>
       <br />
       <StyledLocationHeadline>Location </StyledLocationHeadline>
@@ -46,14 +50,56 @@ const StyledImage = styled.img`
   position: relative;
 `;
 
-const StyledDivHeadline = styled.p`
-  text-align: center;
-  font-size: 1.3em;
+const DescriptionHeadline = styled.p`
+  all: unset;
+  margin: 3em;
+  gap: 2em;
+  width: 4em;
+  height: 1.5em;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
 `;
 
 const StyledLocationHeadline = styled.p`
-  text-align: center;
-  font-size: 1.3em;
+  all: unset;
+  margin: 3em;
+  gap: 2em;
+  width: 4em;
+  height: 1.5em;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
 `;
 
 const StyledDescriptionText = styled.p`
@@ -116,8 +162,9 @@ const StyledButton = styled.button`
   }
 `;
 
-const StyledHeadline = styled.button`
+const StyledHeadline = styled.h1`
   all: unset;
+  font-size: 14rem;
   margin: 3em;
   width: 7em;
   height: 2em;
@@ -126,14 +173,10 @@ const StyledHeadline = styled.button`
   border-radius: 0.5em;
   transition: ease-out 0.9s;
   outline: none;
-  background-image: linear-gradient(
-    90deg,
-    #0065ff,
-    #6942ef,
-    #6554c0,
-    #008cff,
-    #0065ff,
-    #6942ef
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
   );
   background-size: 400%;
   background-position: 0% 0%;
