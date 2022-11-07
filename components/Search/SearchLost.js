@@ -18,7 +18,7 @@ export default function SearchLost() {
           <StyledSearchBar
             id="inputSearchBar1"
             type="text"
-            placeholder="What are you looking for?"
+            placeholder="search anything"
             onChange={(event) => setSearchTerm1(event.target.value)}
           />
         </label>
@@ -47,11 +47,7 @@ const Main = styled.main`
 `;
 
 const StyledSearchBar = styled.input`
-  border-radius: 1em;
-  text-align: center;
-  background-color: whitesmoke;
-  width: 15em;
-  height: 3em;
+  color: #171717;
 `;
 
 const StyledGrid = styled.ul`
@@ -64,23 +60,5 @@ const StyledGrid = styled.ul`
 `;
 
 const StyledHeadline = styled.h1`
-  all: unset;
-  font-size: 14rem;
-  margin: 3em;
-  width: 7em;
-  height: 2em;
-  position: relative;
-  color: white;
-  border-radius: 0.5em;
-  transition: ease-out 0.9s;
-  outline: none;
-  background: linear-gradient(
-    99.89deg,
-    #ecedf0 9.59%,
-    rgba(227, 229, 241, 0.78) 83.75%
-  );
-  background-size: 400%;
-  background-position: 0% 0%;
-  font-size: 2em;
-  padding: 0.5em;
+  margin: 2em;
 `;

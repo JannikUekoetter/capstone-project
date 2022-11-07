@@ -13,9 +13,14 @@ export function ItemDetail2({ id }) {
 
   return (
     <StyledDiv>
+      <br />
+      <br />
       <StyledHeadline>{detailItem2.name}</StyledHeadline>
       <br />
-
+      <br />
+      <br />
+      <br />
+      <br />
       <StyledImage
         objectFit="cover"
         src={detailItem2.img}
@@ -173,10 +178,14 @@ const StyledHeadline = styled.h1`
   border-radius: 0.5em;
   transition: ease-out 0.9s;
   outline: none;
-  background: linear-gradient(
-    99.89deg,
-    #ecedf0 9.59%,
-    rgba(227, 229, 241, 0.78) 83.75%
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
   );
   background-size: 400%;
   background-position: 0% 0%;

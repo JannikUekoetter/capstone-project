@@ -22,8 +22,9 @@ export default function AddLostItem() {
   return (
     <>
       <StyledForm onSubmit={handleClick}>
-        <h1>Lost Something?</h1>
+        <Headline>Lost Something?</Headline>
         <label>
+          <br />
           <h2>Tell us more</h2>
           <label htmlFor="name">
             <input name="name" type="text" placeholder="Name" required />
@@ -42,13 +43,22 @@ export default function AddLostItem() {
         <br />
         <label htmlFor="location">
           <br />
-          <h3>Whats your location?</h3>
+          <br />
+          <Headline>Whats your location?</Headline>
+          <br />
+          <br />
+          <br />
           <input name="location" type="text" placeholder="Location" required />
           <br />
         </label>
         <br />
+        <br />
         <label htmlFor="picture">
-          <h4>Upload a Picture</h4>
+          <Headline>Upload a Picture</Headline>
+          <br />
+          <br />
+          <br />
+          <br />
         </label>
         <input
           name="picture"
@@ -74,3 +84,5 @@ const StyledForm = styled.form`
 const StyledTextarea = styled.textarea`
   border-radius: 1em;
 `;
+
+const Headline = styled.h1``;

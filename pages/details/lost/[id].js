@@ -63,7 +63,12 @@ const DescriptionHeadline = styled.p`
   border-radius: 0.5em;
   transition: ease-out 0.9s;
   outline: none;
-  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
   background-size: 400%;
   background-position: 0% 0%;
   font-size: 2em;
@@ -80,7 +85,12 @@ const StyledLocationHeadline = styled.p`
   border-radius: 0.5em;
   transition: ease-out 0.9s;
   outline: none;
-  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
   background-size: 400%;
   background-position: 0% 0%;
   font-size: 2em;
@@ -128,7 +138,12 @@ const StyledButton = styled.button`
   border-radius: 0.5em;
   transition: ease-out 0.9s;
   outline: none;
-  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
   background-size: 400%;
   background-position: 0% 0%;
   font-size: 2em;
@@ -150,7 +165,12 @@ const StyledHeadline = styled.button`
   border-radius: 0.5em;
   transition: ease-out 0.9s;
   outline: none;
-  background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
   background-size: 400%;
   background-position: 0% 0%;
   font-size: 2em;

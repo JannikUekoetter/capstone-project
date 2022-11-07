@@ -18,9 +18,9 @@ export default function Home() {
       </nav>
       <Main>
         <h1>Welcome to LOSINGiT!</h1>
-        <StyledHeadline>
-          Have you lost or found something? Check our map!
-        </StyledHeadline>
+        <h2>
+          Have you lost or found something? <br /> Check our map!
+        </h2>
 
         <Map />
       </Main>
@@ -33,6 +33,27 @@ const Main = styled.main`
 `;
 
 const StyledHeadline = styled.h1`
-  margin-bottom: 1.5em;
-  font-size: 1.5em;
+  all: unset;
+  font-size: 14rem;
+  margin: 3em;
+  width: 7em;
+  height: 2em;
+  position: relative;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
 `;
