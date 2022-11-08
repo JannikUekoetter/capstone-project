@@ -12,10 +12,10 @@ export function ItemDetail({ id }) {
   if (!detailItem) return <p> loading... </p>;
 
   return (
-    <StyledDiv>
-      <StyledHeadline>{detailItem.name}</StyledHeadline>
+    <PageContainer>
+      <ItemHeadline>{detailItem.name}</ItemHeadline>
       <br />
-      <StyledImage
+      <ItemImage
         objectFit="cover"
         src={detailItem.img}
         width={200}
@@ -23,158 +23,97 @@ export function ItemDetail({ id }) {
         layout="fill"
         alt="lost items"
       />
-      <br />
-      <br />
-      <br />
-      <DescriptionHeadline>Description</DescriptionHeadline>
-      <StyledDescriptionText>
-        <br />
-        <br /> {detailItem.description}
-      </StyledDescriptionText>
-      <StyledLocationHeadline>Location</StyledLocationHeadline>
 
-      <StyledLocationText>{detailItem.location}</StyledLocationText>
-      <br />
+      <SectionHeadline>Description</SectionHeadline>
+      <Description>{detailItem.description}</Description>
+      <SectionHeadline>Location</SectionHeadline>
+
+      <LocationText>{detailItem.location}</LocationText>
+
       <Link href="/contact">
-        <StyledButton> Make Contact</StyledButton>
+        <ContactButton> Make Contact</ContactButton>
       </Link>
-    </StyledDiv>
+    </PageContainer>
   );
 }
 
-const StyledDiv = styled.div`
+const redGradient = `radial-gradient(97.67% 442.95% at 75.27% 0%, #FC00D8 0%, #FF0054 91.02%);`;
+
+const PageContainer = styled.main`
+  display: grid;
+  justify-content: center;
+  padding: 0 1em;
+  background: linear-gradient(169.6deg, #f0f2f7 11.26%, #eaedf8 86.54%);
+`;
+
+const ItemHeadline = styled.h1`
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  background: ${redGradient};
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.8em 2.5em;
   text-align: center;
+  place-self: center;
 `;
 
-const StyledImage = styled.img`
+const ItemImage = styled.img`
   border-radius: 2em;
-  width: 22em;
-  height: 22em;
-  position: relative;
+  margin: 1em auto;
 `;
 
-const DescriptionHeadline = styled.p`
-  all: unset;
-  margin: 3em;
-  gap: 2em;
-  width: 4em;
-  height: 1.5em;
+const SectionHeadline = styled.h2`
   color: white;
   border-radius: 0.5em;
   transition: ease-out 0.9s;
-  outline: none;
-  background-image: linear-gradient(
-    -225deg,
-    #ff3cac 0%,
-    #562b7c 52%,
-    #2b86c5 100%
-  );
+  background: ${redGradient};
   background-size: 400%;
   background-position: 0% 0%;
-  font-size: 2em;
-  padding: 0.5em;
-`;
-
-const StyledLocationHeadline = styled.p`
-  all: unset;
-  margin: 3em;
-  gap: 2em;
-  width: 4em;
-  height: 1.5em;
-  color: white;
-  border-radius: 0.5em;
-  transition: ease-out 0.9s;
-  outline: none;
-  background-image: linear-gradient(
-    -225deg,
-    #ff3cac 0%,
-    #562b7c 52%,
-    #2b86c5 100%
-  );
-  background-size: 400%;
-  background-position: 0% 0%;
-  font-size: 2em;
-  padding: 0.5em;
-`;
-
-const StyledDescriptionText = styled.p`
-  text-align: left;
   font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0.8em 2.5em;
+  text-align: center;
+  place-self: center;
+  margin-top: 3em;
+`;
+
+const Description = styled.p`
+  font-size: 0.9em;
   background: linear-gradient(
     99.89deg,
     #ecedf0 9.59%,
     rgba(227, 229, 241, 0.78) 83.75%
   );
-  margin: 3em;
   border-radius: 1em;
+  padding: 2em;
+  line-height: 1.6;
+`;
+
+const LocationText = styled(Description)`
+  text-align: center;
   padding: 2em;
 `;
 
-const StyledLocationText = styled.p`
-  text-align: left;
-  font-size: 1.2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(
-    99.89deg,
-    #ecedf0 9.59%,
-    rgba(227, 229, 241, 0.78) 83.75%
-  );
-  margin: 3em;
-  border-radius: 1em;
-  padding: 2em;
-`;
-
-const StyledButton = styled.button`
+const ContactButton = styled.button`
   all: unset;
-  width: 7em;
-  height: 2em;
-  position: relative;
   color: white;
-  border-radius: 0.5em;
+  border-radius: 2em;
   transition: ease-out 0.9s;
-  outline: none;
-  background-image: linear-gradient(
-    -225deg,
-    #ff3cac 0%,
-    #562b7c 52%,
-    #2b86c5 100%
-  );
+  background-image: ${redGradient};
   background-size: 400%;
   background-position: 0% 0%;
-  font-size: 2em;
-  padding: 0.5em;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0.8em 2.5em;
+  margin: 3em auto;
+  place-self: center;
 
   &:hover {
-    box-shadow: inset 8em 0 0 0 green;
+    box-shadow: inset 8em 0 0 0 darkblue;
   }
-`;
-
-const StyledHeadline = styled.button`
-  all: unset;
-  font-size: 14rem;
-  margin: 3em;
-  width: 7em;
-  height: 2em;
-  position: relative;
-  color: white;
-  border-radius: 0.5em;
-  transition: ease-out 0.9s;
-  outline: none;
-  background-image: linear-gradient(
-    -225deg,
-    #ff3cac 0%,
-    #562b7c 52%,
-    #2b86c5 100%
-  );
-  background-size: 400%;
-  background-position: 0% 0%;
-  font-size: 2em;
-  padding: 0.5em;
 `;
 
 export default ItemDetail;

@@ -62,9 +62,9 @@ const StyledGrid = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin: 2em;
+  margin: 1em;
   padding: 2em;
-  gap: 1em;
+  gap: 0.5em;
 `;
 
 const StyledHeadline = styled.h1`

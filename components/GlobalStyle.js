@@ -25,6 +25,14 @@ const GlobalStyle = createGlobalStyle`
           background-color: var(--background-primary);
           color: var(--text-primary);
       }
+      main {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        
+      }
+
+    
   `;
 
 export default GlobalStyle;

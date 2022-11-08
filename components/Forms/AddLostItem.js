@@ -85,4 +85,24 @@ const StyledTextarea = styled.textarea`
   border-radius: 1em;
 `;
 
-const Headline = styled.h1``;
+const Headline = styled.h1`
+  background-image: linear-gradient(
+    90deg,
+    #0065ff,
+    #6942ef,
+    #6554c0,
+    #008cff,
+    #0065ff,
+    #6942ef
+  );
+  color: white;
+  border-radius: 0.5em;
+  font-size: 4em;
+  height: 3em;
+  width: 7em;
+  margin-left: 8em;
+  text-align: center;
+  background-size: 400%;
+  background-position: 0% 0%;
+  position: relative;
+`;
