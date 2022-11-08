@@ -3,14 +3,9 @@ import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function FoundItem({ name, img, id }) {
+export default function FoundItem({ img, id }) {
   return (
     <>
-      <p>
-        <br />
-        {name}
-        <br />
-      </p>
       <StyledList>
         <ImageContainer>
           <Link href={`/details/found/${id}`}>
@@ -35,13 +30,11 @@ const ImageContainer = styled.li`
 
 const StyledImage = styled.img`
   border-radius: 2em;
-  width: 200px;
-  height: 200px;
+  width: 12em;
+  height: 12em;
   position: relative;
 `;
 
 const StyledList = styled.li`
   list-style-type: none;
-  display: flex;
-  justify-content: center;
 `;

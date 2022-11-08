@@ -11,19 +11,19 @@ export default function SearchLost() {
 
   return (
     <Main>
-      <h2>Lost Items</h2>
+      <StyledHeadline>Lost Items</StyledHeadline>
       <div>
         <label htmlFor="inputSearchBar1">
           <br />
           <StyledSearchBar
             id="inputSearchBar1"
             type="text"
-            placeholder="What are you looking for?"
+            placeholder="search anything"
             onChange={(event) => setSearchTerm1(event.target.value)}
           />
         </label>
       </div>
-      <ul>
+      <StyledGrid>
         {lostItems
           .filter((lostItem) =>
             lostItem.name.toLowerCase().includes(searchTerm1)
@@ -37,7 +37,7 @@ export default function SearchLost() {
               id={lostItem.id}
             />
           ))}
-      </ul>
+      </StyledGrid>
     </Main>
   );
 }
@@ -47,9 +47,18 @@ const Main = styled.main`
 `;
 
 const StyledSearchBar = styled.input`
-  border-radius: 1em;
-  text-align: center;
-  background-color: whitesmoke;
-  width: 15em;
-  height: 3em;
+  color: #171717;
+`;
+
+const StyledGrid = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 2em;
+  padding: 2em;
+  gap: 1em;
+`;
+
+const StyledHeadline = styled.h1`
+  margin: 2em;
 `;

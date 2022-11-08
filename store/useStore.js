@@ -3,8 +3,6 @@ import { lostItems as initialLostItems } from "../services/Db";
 import { foundItems as initialFoundItems } from "../services/Db";
 
 export const useStore = create((set) => ({
-  //hier der Zustand für die AddLostItem
-
   lostItems: initialLostItems,
 
   addLostItem: (newLostItem) => {
@@ -12,7 +10,7 @@ export const useStore = create((set) => ({
       return { lostItems: [newLostItem, ...state.lostItems] };
     });
   },
-  //hier der Zustand für die AddFoundItem
+
   foundItems: initialFoundItems,
 
   addFoundItem: (newFoundItem) => {

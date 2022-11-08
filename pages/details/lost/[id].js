@@ -13,7 +13,8 @@ export function ItemDetail({ id }) {
 
   return (
     <StyledDiv>
-      <h1>{detailItem.name}</h1>
+      <StyledHeadline>{detailItem.name}</StyledHeadline>
+      <br />
       <StyledImage
         objectFit="cover"
         src={detailItem.img}
@@ -22,27 +23,158 @@ export function ItemDetail({ id }) {
         layout="fill"
         alt="lost items"
       />
-      <p>
-        Description: <br /> <br /> {detailItem.description}
-      </p>
       <br />
-      <p>Location: {detailItem.location}</p>
+      <br />
+      <br />
+      <DescriptionHeadline>Description</DescriptionHeadline>
+      <StyledDescriptionText>
+        <br />
+        <br /> {detailItem.description}
+      </StyledDescriptionText>
+      <StyledLocationHeadline>Location</StyledLocationHeadline>
+
+      <StyledLocationText>{detailItem.location}</StyledLocationText>
+      <br />
       <Link href="/contact">
-        <button> Make Contact</button>
+        <StyledButton> Make Contact</StyledButton>
       </Link>
     </StyledDiv>
   );
 }
 
+const StyledDiv = styled.div`
+  text-align: center;
+`;
+
 const StyledImage = styled.img`
   border-radius: 2em;
-  width: 200px;
-  height: 200px;
+  width: 22em;
+  height: 22em;
   position: relative;
 `;
 
-const StyledDiv = styled.div`
-  text-align: center;
+const DescriptionHeadline = styled.p`
+  all: unset;
+  margin: 3em;
+  gap: 2em;
+  width: 4em;
+  height: 1.5em;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
+`;
+
+const StyledLocationHeadline = styled.p`
+  all: unset;
+  margin: 3em;
+  gap: 2em;
+  width: 4em;
+  height: 1.5em;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
+`;
+
+const StyledDescriptionText = styled.p`
+  text-align: left;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  margin: 3em;
+  border-radius: 1em;
+  padding: 2em;
+`;
+
+const StyledLocationText = styled.p`
+  text-align: left;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  margin: 3em;
+  border-radius: 1em;
+  padding: 2em;
+`;
+
+const StyledButton = styled.button`
+  all: unset;
+  width: 7em;
+  height: 2em;
+  position: relative;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
+
+  &:hover {
+    box-shadow: inset 8em 0 0 0 green;
+  }
+`;
+
+const StyledHeadline = styled.button`
+  all: unset;
+  font-size: 14rem;
+  margin: 3em;
+  width: 7em;
+  height: 2em;
+  position: relative;
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  outline: none;
+  background-image: linear-gradient(
+    -225deg,
+    #ff3cac 0%,
+    #562b7c 52%,
+    #2b86c5 100%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 2em;
+  padding: 0.5em;
 `;
 
 export default ItemDetail;
