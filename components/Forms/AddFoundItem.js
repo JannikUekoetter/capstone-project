@@ -39,7 +39,7 @@ export default function AddFoundItem() {
             </label>
             <br />
             <br />
-            <StyledTextarea
+            <StyledDescriptionInput
               type="text"
               name="description"
               placeholder="Description"
@@ -78,10 +78,8 @@ export default function AddFoundItem() {
             accept="image/png, image/jpeg"
             src="/assets/MrBean.png"
           />
-          <br />
-          <br />
-          <br />
-          <button type="submit">Submit</button>
+
+          <SubmitButton type="submit">Submit</SubmitButton>
         </StyledForm>
       </>
     );
@@ -129,14 +127,66 @@ const StyledForm = styled.form`
   position: relative;
 `;
 
-const StyledTextarea = styled.textarea`
+const StyledLocationInput = styled.input`
+  all: unset;
+  font-size: 0.9em;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
   border-radius: 1em;
+  padding: 2em;
+  line-height: 1.6;
+`;
+
+const SubmitButton = styled.button`
+  all: unset;
+  color: white;
+  border-radius: 2em;
+  transition: ease-out 0.9s;
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0.8em 2.5em;
+  margin: 3em auto;
+  place-self: center;
+
+  &:hover {
+    box-shadow: inset 8em 0 0 0 darkblue;
+  }
+`;
+
+const StyledDescriptionInput = styled.input`
+  all: unset;
+
+  font-size: 0.9em;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  border-radius: 1em;
+  padding: 2em;
+  line-height: 1.6;
+  height: 10em;
 `;
 
 const StyledNameInput = styled.input`
+  all: unset;
+  font-size: 0.9em;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
   border-radius: 1em;
-`;
-
-const StyledLocationInput = styled.input`
-  border-radius: 1em;
+  padding: 2em;
+  line-height: 1.6;
 `;
