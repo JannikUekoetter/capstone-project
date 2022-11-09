@@ -7,31 +7,22 @@ import Image from "next/image";
 export default function BurgerMenu() {
   return (
     <StyledDiv>
-      <h1>
-        <Image
-          src="/assets/logo/image2.svg"
-          width={60}
-          height={45}
-          alt="logo"
-        ></Image>
-      </h1>
-
-      <FaAlignJustify />
+      <h1>Navigation</h1>
 
       <nav>
         <StyledList>
-          <li>
-            <Link href="/searchlost">Search Lost</Link>
-          </li>
-          <li>
-            <Link href="/addlost">Add Lost</Link>
-          </li>
-          <li>
-            <Link href="/searchfound">Search Found</Link>
-          </li>
-          <li>
-            <Link href="/addfound">Add Found</Link>
-          </li>
+          <NavListItem>
+            <Link href="/searchlost">Search Lost Items</Link>
+          </NavListItem>
+          <NavListItem>
+            <Link href="/addlost">Add Lost Items</Link>
+          </NavListItem>
+          <NavListItem>
+            <Link href="/searchfound">Search Found Items</Link>
+          </NavListItem>
+          <NavListItem>
+            <Link href="/addfound">Add Found Items</Link>
+          </NavListItem>
         </StyledList>
       </nav>
     </StyledDiv>
@@ -44,8 +35,11 @@ const StyledDiv = styled.div`
 
 const StyledList = styled.ul`
   list-style-type: none;
+  padding: 0.5em;
+  font-size: 0.9em;
+  margin-bottom: 2em;
 `;
 
-const StyledBurgerItems = styled.li`
-  text-align: left;
+const NavListItem = styled.li`
+  padding: 0.5em;
 `;

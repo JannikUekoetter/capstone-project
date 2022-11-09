@@ -63,6 +63,8 @@ const ItemHeadline = styled.h1`
 const ItemImage = styled.img`
   border-radius: 2em;
   margin: 1em auto;
+  height: 15em;
+  width: 15em;
 `;
 
 const SectionHeadline = styled.h2`

@@ -24,7 +24,6 @@ export default function AddLostItem() {
       <StyledForm onSubmit={handleClick}>
         <Headline>Lost Something?</Headline>
         <label>
-          <br />
           <h2>Tell us more</h2>
           <label htmlFor="name">
             <input name="name" type="text" placeholder="Name" required />
@@ -41,25 +40,24 @@ export default function AddLostItem() {
           />
         </label>
         <br />
+        <br />
+        <br />
         <label htmlFor="location">
-          <br />
-          <br />
-          <Headline>Whats your location?</Headline>
+          <SecondHeadline>Whats your location?</SecondHeadline>
           <br />
           <br />
           <br />
           <input name="location" type="text" placeholder="Location" required />
-          <br />
         </label>
+        <br />
         <br />
         <br />
         <label htmlFor="picture">
-          <Headline>Upload a Picture</Headline>
-          <br />
-          <br />
-          <br />
-          <br />
+          <SecondHeadline>Upload a Picture</SecondHeadline>
         </label>
+        <br />
+        <br />
+        <br />
         <input
           name="picture"
           type="file"
@@ -67,9 +65,10 @@ export default function AddLostItem() {
           accept="image/png, image/jpeg"
           src="/assets/MrBean.png"
         />
+
         <br />
         <br />
-        <br />
+
         <button type="submit">Submit</button>
       </StyledForm>
     </>
@@ -86,23 +85,37 @@ const StyledTextarea = styled.textarea`
 `;
 
 const Headline = styled.h1`
-  background-image: linear-gradient(
-    90deg,
-    #0065ff,
-    #6942ef,
-    #6554c0,
-    #008cff,
-    #0065ff,
-    #6942ef
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
   );
   color: white;
   border-radius: 0.5em;
-  font-size: 4em;
-  height: 3em;
-  width: 7em;
-  margin-left: 8em;
+  height: 2em;
+  width: 10em;
+  margin-left: 0.8em;
   text-align: center;
   background-size: 400%;
   background-position: 0% 0%;
   position: relative;
+  font-size: 2em;
+`;
+
+const SecondHeadline = styled.h2`
+  all: unset;
+  width: 2em;
+  height: 1.5em;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 0.5em;
+  outline: none;
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  padding: 0.5em;
 `;

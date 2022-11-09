@@ -37,7 +37,7 @@ export function ItemDetail({ id }) {
   );
 }
 
-const redGradient = `radial-gradient(97.67% 442.95% at 75.27% 0%, #FC00D8 0%, #FF0054 91.02%);`;
+const blueGradient = `radial-gradient(105.38% 477.9% at 82.97% -65.91%, #10C7EC 0%, #6D38CD 91.02%);`;
 
 const PageContainer = styled.main`
   display: grid;
@@ -50,7 +50,7 @@ const ItemHeadline = styled.h1`
   color: white;
   border-radius: 0.5em;
   transition: ease-out 0.9s;
-  background: ${redGradient};
+  background: ${blueGradient};
   background-size: 400%;
   background-position: 0% 0%;
   font-size: 1.4em;
@@ -64,13 +64,15 @@ const ItemHeadline = styled.h1`
 const ItemImage = styled.img`
   border-radius: 2em;
   margin: 1em auto;
+  height: 15em;
+  width: 15em;
 `;
 
 const SectionHeadline = styled.h2`
   color: white;
   border-radius: 0.5em;
   transition: ease-out 0.9s;
-  background: ${redGradient};
+  background: ${blueGradient};
   background-size: 400%;
   background-position: 0% 0%;
   font-size: 1.2em;
@@ -102,7 +104,7 @@ const ContactButton = styled.button`
   color: white;
   border-radius: 2em;
   transition: ease-out 0.9s;
-  background-image: ${redGradient};
+  background-image: ${blueGradient};
   background-size: 400%;
   background-position: 0% 0%;
   font-size: 1.2em;

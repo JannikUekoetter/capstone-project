@@ -22,9 +22,13 @@ export default function AddFoundItem() {
     return (
       <>
         <StyledForm onSubmit={handleClick}>
-          <h1>Found Something?</h1>
+          <Headline>Found Something?</Headline>
           <label>
-            <h2>Tell us more</h2>
+            <br />
+            <SecondHeadline>Tell us more</SecondHeadline>
+            <br />
+            <br />
+            <br />
             <label htmlFor="name">
               <StyledNameInput
                 name="name"
@@ -47,7 +51,11 @@ export default function AddFoundItem() {
           <br />
           <label htmlFor="location">
             <br />
-            <h3>Whats your location?</h3>
+            <br />
+            <SecondHeadline>Whats your location?</SecondHeadline>
+            <br />
+            <br />
+            <br />
             <StyledLocationInput
               name="location"
               type="text"
@@ -57,8 +65,11 @@ export default function AddFoundItem() {
             <br />
           </label>
           <br />
+          <br />
           <label htmlFor="picture">
-            <h4>Upload a Picture</h4>
+            <SecondHeadline>Upload a Picture</SecondHeadline>
+            <br />
+            <br />
           </label>
           <input
             name="picture"
@@ -76,6 +87,42 @@ export default function AddFoundItem() {
     );
   }
 }
+
+const Headline = styled.h1`
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
+  );
+  color: white;
+  border-radius: 0.5em;
+  height: 2em;
+  width: 10em;
+  margin-left: 0.8em;
+  text-align: center;
+  background-size: 400%;
+  background-position: 0% 0%;
+  position: relative;
+  font-size: 2em;
+`;
+
+const SecondHeadline = styled.h2`
+  all: unset;
+  width: 2em;
+  height: 1.5em;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 0.5em;
+  outline: none;
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  padding: 0.5em;
+`;
 
 const StyledForm = styled.form`
   text-align: center;
