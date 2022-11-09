@@ -23,15 +23,23 @@ export default function AddLostItem() {
     <>
       <StyledForm onSubmit={handleClick}>
         <Headline>Lost Something?</Headline>
+        <br />
         <label>
+          <SecondHeadline>Tell us more</SecondHeadline>
           <br />
-          <h2>Tell us more</h2>
+          <br />
+          <br />
           <label htmlFor="name">
-            <input name="name" type="text" placeholder="Name" required />
+            <StyledNameInput
+              name="name"
+              type="text"
+              placeholder="Name"
+              required
+            />
           </label>
           <br />
           <br />
-          <StyledTextarea
+          <StyledDescriptionInput
             type="text"
             name="description"
             placeholder="Description"
@@ -41,25 +49,29 @@ export default function AddLostItem() {
           />
         </label>
         <br />
+        <br />
+        <br />
         <label htmlFor="location">
-          <br />
-          <br />
-          <Headline>Whats your location?</Headline>
+          <SecondHeadline>Whats your location?</SecondHeadline>
           <br />
           <br />
           <br />
-          <input name="location" type="text" placeholder="Location" required />
-          <br />
+          <StyledLocationInput
+            name="location"
+            type="text"
+            placeholder="Location"
+            required
+          />
         </label>
+        <br />
         <br />
         <br />
         <label htmlFor="picture">
-          <Headline>Upload a Picture</Headline>
-          <br />
-          <br />
-          <br />
-          <br />
+          <SecondHeadline>Upload a Picture</SecondHeadline>
         </label>
+        <br />
+        <br />
+        <br />
         <input
           name="picture"
           type="file"
@@ -67,10 +79,8 @@ export default function AddLostItem() {
           accept="image/png, image/jpeg"
           src="/assets/MrBean.png"
         />
-        <br />
-        <br />
-        <br />
-        <button type="submit">Submit</button>
+
+        <SubmitButton type="submit">Submit</SubmitButton>
       </StyledForm>
     </>
   );
@@ -81,28 +91,102 @@ const StyledForm = styled.form`
   position: relative;
 `;
 
-const StyledTextarea = styled.textarea`
-  border-radius: 1em;
-`;
-
 const Headline = styled.h1`
-  background-image: linear-gradient(
-    90deg,
-    #0065ff,
-    #6942ef,
-    #6554c0,
-    #008cff,
-    #0065ff,
-    #6942ef
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
   );
   color: white;
   border-radius: 0.5em;
-  font-size: 4em;
-  height: 3em;
-  width: 7em;
-  margin-left: 8em;
+  height: 2em;
+  width: 10em;
+  margin-left: 0.8em;
   text-align: center;
   background-size: 400%;
   background-position: 0% 0%;
   position: relative;
+  font-size: 2em;
+`;
+
+const SecondHeadline = styled.h2`
+  all: unset;
+  width: 2em;
+
+  height: 1.5em;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 0.5em;
+  outline: none;
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  padding: 0.5em;
+`;
+
+const StyledNameInput = styled.input`
+  all: unset;
+  font-size: 0.9em;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  border-radius: 1em;
+  padding: 2em;
+  line-height: 1.6;
+`;
+
+const StyledDescriptionInput = styled.input`
+  all: unset;
+  font-size: 0.9em;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  border-radius: 1em;
+  padding: 2em;
+  line-height: 1.6;
+  height: 10em;
+`;
+
+const StyledLocationInput = styled.input`
+  all: unset;
+  font-size: 0.9em;
+  background: linear-gradient(
+    99.89deg,
+    #ecedf0 9.59%,
+    rgba(227, 229, 241, 0.78) 83.75%
+  );
+  border-radius: 1em;
+  padding: 2em;
+  line-height: 1.6;
+`;
+
+const SubmitButton = styled.button`
+  all: unset;
+  color: white;
+  border-radius: 2em;
+  transition: ease-out 0.9s;
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0.8em 2.5em;
+  margin: 3em auto;
+  place-self: center;
+
+  &:hover {
+    box-shadow: inset 8em 0 0 0 darkblue;
+  }
 `;

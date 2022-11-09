@@ -29,10 +29,9 @@ const ImageContainer = styled.li`
 `;
 
 const StyledImage = styled.img`
-  border-radius: 2em;
+  border-radius: 3em;
   width: 12em;
   height: 12em;
-  position: relative;
 `;
 
 const StyledList = styled.li`

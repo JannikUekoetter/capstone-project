@@ -9,23 +9,16 @@ export default function SearchFound() {
   const foundItems = useStore((state) => state.foundItems);
   return (
     <Main>
-      <div>
-        <br />
-        <br />
-        <StyledHeadline>Found Items</StyledHeadline>
-        <br />
-        <br />
-        <br />
-        <label htmlFor="inputSearchBar2">
-          <br />
-          <StyledSearchBar
-            id="inputSearchBar2"
-            type="text"
-            placeholder="What are you looking for?"
-            onChange={(event) => setSearchTerm2(event.target.value)}
-          />
-        </label>
-      </div>
+      <StyledHeadline>Found Items</StyledHeadline>
+
+      <label htmlFor="inputSearchBar2">
+        <StyledSearchBar
+          id="inputSearchBar2"
+          type="text"
+          placeholder="Search..."
+          onChange={(event) => setSearchTerm2(event.target.value)}
+        />
+      </label>
 
       <StyledGrid>
         {foundItems
@@ -51,40 +44,48 @@ const Main = styled.main`
 `;
 
 const StyledSearchBar = styled.input`
-  border-radius: 1em;
-  text-align: center;
-  background-color: whitesmoke;
-  width: 15em;
-  height: 3em;
+  all: unset;
+  margin-top: 2em;
+  width: 6em;
+  height: 1em;
+  color: white;
+  border-radius: 0.5em;
+  background-image: linear-gradient(
+    to top,
+    #bdc2e8 0%,
+    #bdc2e8 1%,
+    #e6dee9 100%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 1.5em;
+  padding: 0.5em;
+  cursor: pointer;
 `;
 
 const StyledGrid = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin: 1em;
-  padding: 2em;
-  gap: 0.5em;
+  padding: 1em;
+  margin-left: 2em;
+  gap: 1em;
 `;
 
 const StyledHeadline = styled.h1`
   all: unset;
-  font-size: 14rem;
-  margin: 3em;
+  margin-left: 3em;
+  margin-top: 2em;
   width: 7em;
-  height: 2em;
+  height: 1.5em;
   position: relative;
   color: white;
   border-radius: 0.5em;
   outline: none;
-  background-image: linear-gradient(
-    90deg,
-    #0065ff,
-    #6942ef,
-    #6554c0,
-    #008cff,
-    #0065ff,
-    #6942ef
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
   );
   background-size: 400%;
   background-position: 0% 0%;
