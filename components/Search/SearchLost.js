@@ -4,6 +4,7 @@ import LostItem from "../LostItem";
 import { lostItems } from "../../services/Db";
 import { useState } from "react";
 import { useStore } from "../../store/useStore";
+import BurgerMenu from "../BurgerMenu";
 
 export default function SearchLost() {
   const [searchTerm1, setSearchTerm1] = useState("");
@@ -11,6 +12,7 @@ export default function SearchLost() {
 
   return (
     <Main>
+      <BurgerMenu />
       <StyledHeadline>Lost Items</StyledHeadline>
       <div>
         <label htmlFor="inputSearchBar1">

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStore } from "../../store/useStore";
 import { useRouter } from "next/router";
+import BurgerMenu from "../BurgerMenu";
 
 export default function AddLostItem() {
   const addLostItem = useStore((state) => state.addLostItem);
@@ -22,6 +23,7 @@ export default function AddLostItem() {
   return (
     <>
       <StyledForm onSubmit={handleClick}>
+        <BurgerMenu />
         <Headline>Lost Something?</Headline>
         <br />
         <label>

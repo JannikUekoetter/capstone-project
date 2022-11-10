@@ -2,6 +2,7 @@ import { getItemByDatabaseId } from "../../../services/Db";
 import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
+import BurgerMenu from "../../../components/BurgerMenu";
 
 export function getServerSideProps(context) {
   return { props: { id: context.query.id } };
@@ -13,6 +14,7 @@ export function ItemDetail({ id }) {
 
   return (
     <PageContainer>
+      <BurgerMenu />
       <ItemHeadline>{detailItem.name}</ItemHeadline>
       <br />
       <ItemImage

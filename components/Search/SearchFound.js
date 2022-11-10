@@ -3,12 +3,14 @@ import { useState } from "react";
 import FoundItem from "../FoundItem";
 import styled from "styled-components";
 import { useStore } from "../../store/useStore";
+import BurgerMenu from "../BurgerMenu";
 
 export default function SearchFound() {
   const [searchTerm2, setSearchTerm2] = useState("");
   const foundItems = useStore((state) => state.foundItems);
   return (
     <Main>
+      <BurgerMenu />
       <StyledHeadline>Found Items</StyledHeadline>
 
       <label htmlFor="inputSearchBar2">
