@@ -100,15 +100,13 @@ const Headline = styled.h1`
     #6d38cd 91.02%
   );
   color: white;
-  border-radius: 0.5em;
+  color: white;
   height: 2em;
-  width: 10em;
-  margin-left: 3.8em;
-  text-align: center;
+  border-radius: 0.2em;
   background-size: 400%;
   background-position: 0% 0%;
-  position: relative;
   font-size: 2em;
+  text-align: center;
 `;
 
 const SecondHeadline = styled.h2`

@@ -51,8 +51,7 @@ const Main = styled.main`
 
 const StyledSearchBar = styled.input`
   all: unset;
-  width: 6em;
-  height: 1em;
+
   color: white;
   border-radius: 0.5em;
   background-image: linear-gradient(
@@ -72,17 +71,12 @@ const StyledGrid = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 1em;
+
   gap: 1em;
 `;
 
 const StyledHeadline = styled.h1`
   all: unset;
-  margin-left: 3em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  width: 7em;
-  height: 1.5em;
 
   color: white;
   border-radius: 0.5em;
@@ -94,6 +88,6 @@ const StyledHeadline = styled.h1`
   );
   background-size: 400%;
   background-position: 0% 0%;
-  font-size: 2em;
+  font-size: 1.3em;
   padding: 0.5em;
 `;

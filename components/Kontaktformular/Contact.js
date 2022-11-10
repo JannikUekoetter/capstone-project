@@ -49,15 +49,13 @@ const Headline = styled.h1`
   color: white;
   border-radius: 0.5em;
   height: 2em;
-  width: 10em;
-  margin-left: 3.8em;
   text-align: center;
   background-size: 400%;
   background-position: 0% 0%;
   position: relative;
   font-size: 2em;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 `;
 
 const StyledNameInput = styled.input`
@@ -104,7 +102,7 @@ const SubmitButton = styled.button`
   font-size: 1.2em;
   text-align: center;
   padding: 0.8em 2.5em;
-  margin: 3em auto;
+  margin: 2em auto;
   place-self: center;
 
   &:hover {

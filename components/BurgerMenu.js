@@ -96,7 +96,7 @@ const Anchor = styled.a`
 
 const Logo = styled.img`
   border-radius: 1em;
-  width: 7em;
-  height: 7em;
+  width: 6em;
+  height: 6em;
   padding: 0.8em;
 `;

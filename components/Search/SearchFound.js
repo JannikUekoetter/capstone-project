@@ -49,9 +49,7 @@ const Main = styled.main`
 
 const StyledSearchBar = styled.input`
   all: unset;
-  margin-top: 2em;
-  width: 6em;
-  height: 1em;
+
   color: white;
   border-radius: 0.5em;
   background-image: linear-gradient(
@@ -78,11 +76,7 @@ const StyledGrid = styled.ul`
 
 const StyledHeadline = styled.h1`
   all: unset;
-  margin-left: 3em;
-  margin-top: 2em;
-  width: 7em;
-  height: 1.5em;
-  position: relative;
+
   color: white;
   border-radius: 0.5em;
   outline: none;
