@@ -78,7 +78,7 @@ export default function AddFoundItem() {
             accept="image/png, image/jpeg"
             src="/assets/MrBean.png"
           />
-
+          <br />
           <SubmitButton type="submit">Submit</SubmitButton>
         </StyledForm>
       </>
@@ -96,7 +96,7 @@ const Headline = styled.h1`
   border-radius: 0.5em;
   height: 2em;
   width: 10em;
-  margin-left: 0.8em;
+  margin-left: 3.8em;
   text-align: center;
   background-size: 400%;
   background-position: 0% 0%;
@@ -107,16 +107,13 @@ const Headline = styled.h1`
 const SecondHeadline = styled.h2`
   all: unset;
   width: 2em;
+  opacity: 0.8Q;
   height: 1.5em;
   font-size: 1.2em;
   color: white;
   border-radius: 0.5em;
   outline: none;
-  background-image: radial-gradient(
-    105.38% 477.9% at 82.97% -65.91%,
-    #10c7ec 0%,
-    #6d38cd 91.02%
-  );
+  color: #555fd6;
   background-size: 400%;
   background-position: 0% 0%;
   padding: 0.5em;
