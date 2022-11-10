@@ -1,5 +1,4 @@
 import React from "react";
-import { FaAlignJustify } from "react-icons/fa";
 import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
@@ -70,14 +69,11 @@ const StyledDiv = styled.div`
 
 const StyledList = styled.ul`
   list-style-type: none;
-  padding: 1.5em;
   font-size: 0.9em;
-  height: 10em;
 `;
 
 const NavListItem = styled.li`
   font-size: 0.9em;
-  padding: 0.1em;
 `;
 
 const Anchor = styled.a`
@@ -86,7 +82,7 @@ const Anchor = styled.a`
   color: white;
   cursor: pointer;
   transition: ease-out 0.6s;
-  padding: 0.4em;
+  padding: 0.1em;
 
   &:hover {
     box-shadow: inset 8em 0 0 0 darkblue;
