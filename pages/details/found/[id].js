@@ -26,14 +26,12 @@ export function ItemDetail2({ id }) {
           alt="found items"
         />
 
-        <SectionHeadline>Description</SectionHeadline>
         <Description>{detailItem2.description}</Description>
 
-        <SectionHeadline>Location </SectionHeadline>
         <LocationText>{detailItem2.location}</LocationText>
 
         <Link href="/contact">
-          <ContactButton> Make Contact</ContactButton>
+          <ContactButton>Contact</ContactButton>
         </Link>
       </PageContainer>
     </>

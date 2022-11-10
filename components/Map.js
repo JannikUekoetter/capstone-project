@@ -297,8 +297,8 @@ export default function Map() {
 }
 
 const StyledMapContainer = styled(MapContainer)`
-  height: 30rem;
-  width: 23rem;
+  height: 60vh;
+  width: 45vh;
   margin: 0 auto;
   border-radius: 2rem;
 `;

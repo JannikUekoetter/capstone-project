@@ -27,14 +27,12 @@ export function ItemDetail({ id }) {
           alt="lost items"
         />
 
-        <SectionHeadline>Description</SectionHeadline>
         <Description>{detailItem.description}</Description>
-        <SectionHeadline>Location</SectionHeadline>
 
         <LocationText>{detailItem.location}</LocationText>
 
         <Link href="/contact">
-          <ContactButton> Make Contact</ContactButton>
+          <ContactButton>Contact</ContactButton>
         </Link>
       </PageContainer>
     </>

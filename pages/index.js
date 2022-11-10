@@ -36,10 +36,11 @@ const StyledHeadline = styled.h1`
   transition: ease-out 0.9s;
   background-size: 400%;
   background-position: 0% 0%;
-  font-size: 1.4em;
+  font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 0.8em 2.5em;
+  width: 80%;
   text-align: center;
   place-self: center;
   background-image: radial-gradient(

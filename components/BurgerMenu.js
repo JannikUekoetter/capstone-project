@@ -64,7 +64,7 @@ const StyledDiv = styled.div`
   );
   background-blend-mode: lighten;
   border-radius: 1em;
-  margin-bottom: 4em;
+  margin-bottom: 1em;
   width: 100%;
 `;
 
@@ -72,24 +72,25 @@ const StyledList = styled.ul`
   list-style-type: none;
   padding: 1.5em;
   font-size: 0.9em;
+  height: 10em;
 `;
 
 const NavListItem = styled.li`
-  font-size: 1.2em;
-  padding: 0.5em;
+  font-size: 0.9em;
+  padding: 0.1em;
 `;
 
 const Anchor = styled.a`
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1em;
   color: white;
   cursor: pointer;
-  transition: ease-out 0.5s;
-  padding: 1em;
+  transition: ease-out 0.6s;
+  padding: 0.4em;
 
   &:hover {
     box-shadow: inset 8em 0 0 0 darkblue;
-    border-radius: 1em;
+    border-radius: 0.6em;
   }
 `;
 
