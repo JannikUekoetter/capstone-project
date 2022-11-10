@@ -7,7 +7,14 @@ import Image from "next/image";
 export default function BurgerMenu() {
   return (
     <StyledDiv>
-      <h1>Logo</h1>
+      <Logo
+        objectFit="cover"
+        src="/assets/logo/newlogo.png"
+        width={200}
+        heigth={200}
+        layout="fill"
+        alt="lost items"
+      />
 
       <nav>
         <StyledList className="nav__links">
@@ -86,6 +93,9 @@ const Anchor = styled.a`
   }
 `;
 
-const Nav = styled.nav`
-  width: 100vh;
+const Logo = styled.img`
+  border-radius: 1em;
+  width: 7em;
+  height: 7em;
+  padding: 0.8em;
 `;
