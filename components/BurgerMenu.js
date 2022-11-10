@@ -13,6 +13,12 @@ export default function BurgerMenu() {
         <StyledList className="nav__links">
           <NavListItem>
             {" "}
+            <Link href="/" className="#">
+              <Anchor>Home</Anchor>
+            </Link>
+          </NavListItem>
+          <NavListItem>
+            {" "}
             <Link href="/searchlost" className="#">
               <Anchor>Search Lost </Anchor>
             </Link>
@@ -44,15 +50,15 @@ const StyledDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-image: linear-gradient(
-    -225deg,
-    #3d4e81 0%,
-    #5753c9 48%,
-    #6e7ff3 100%
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
   );
   background-blend-mode: lighten;
   border-radius: 1em;
   margin-bottom: 4em;
+  width: 100%;
 `;
 
 const StyledList = styled.ul`
@@ -70,4 +76,16 @@ const Anchor = styled.a`
   text-decoration: none;
   font-size: 1.2em;
   color: white;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  padding: 1em;
+
+  &:hover {
+    box-shadow: inset 8em 0 0 0 darkblue;
+    border-radius: 1em;
+  }
+`;
+
+const Nav = styled.nav`
+  width: 100vh;
 `;

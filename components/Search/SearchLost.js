@@ -11,35 +11,37 @@ export default function SearchLost() {
   const lostItems = useStore((state) => state.lostItems);
 
   return (
-    <Main>
+    <>
       <BurgerMenu />
-      <StyledHeadline>Lost Items</StyledHeadline>
-      <div>
-        <label htmlFor="inputSearchBar1">
-          <StyledSearchBar
-            id="inputSearchBar1"
-            type="text"
-            placeholder="search..."
-            onChange={(event) => setSearchTerm1(event.target.value)}
-          />
-        </label>
-      </div>
-      <StyledGrid>
-        {lostItems
-          .filter((lostItem) =>
-            lostItem.name.toLowerCase().includes(searchTerm1)
-          )
-          .map((lostItem) => (
-            <LostItem
-              name={lostItem.name}
-              description={lostItem.description}
-              img={lostItem.img}
-              key={lostItem.id}
-              id={lostItem.id}
+      <Main>
+        <StyledHeadline>Lost Items</StyledHeadline>
+        <div>
+          <label htmlFor="inputSearchBar1">
+            <StyledSearchBar
+              id="inputSearchBar1"
+              type="text"
+              placeholder="search..."
+              onChange={(event) => setSearchTerm1(event.target.value)}
             />
-          ))}
-      </StyledGrid>
-    </Main>
+          </label>
+        </div>
+        <StyledGrid>
+          {lostItems
+            .filter((lostItem) =>
+              lostItem.name.toLowerCase().includes(searchTerm1)
+            )
+            .map((lostItem) => (
+              <LostItem
+                name={lostItem.name}
+                description={lostItem.description}
+                img={lostItem.img}
+                key={lostItem.id}
+                id={lostItem.id}
+              />
+            ))}
+        </StyledGrid>
+      </Main>
+    </>
   );
 }
 

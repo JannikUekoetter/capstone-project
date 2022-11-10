@@ -13,29 +13,31 @@ export function ItemDetail({ id }) {
   if (!detailItem) return <p> loading... </p>;
 
   return (
-    <PageContainer>
+    <>
       <BurgerMenu />
-      <ItemHeadline>{detailItem.name}</ItemHeadline>
-      <br />
-      <ItemImage
-        objectFit="cover"
-        src={detailItem.img}
-        width={200}
-        heigth={200}
-        layout="fill"
-        alt="lost items"
-      />
+      <PageContainer>
+        <ItemHeadline>{detailItem.name}</ItemHeadline>
+        <br />
+        <ItemImage
+          objectFit="cover"
+          src={detailItem.img}
+          width={200}
+          heigth={200}
+          layout="fill"
+          alt="lost items"
+        />
 
-      <SectionHeadline>Description</SectionHeadline>
-      <Description>{detailItem.description}</Description>
-      <SectionHeadline>Location</SectionHeadline>
+        <SectionHeadline>Description</SectionHeadline>
+        <Description>{detailItem.description}</Description>
+        <SectionHeadline>Location</SectionHeadline>
 
-      <LocationText>{detailItem.location}</LocationText>
+        <LocationText>{detailItem.location}</LocationText>
 
-      <Link href="/contact">
-        <ContactButton> Make Contact</ContactButton>
-      </Link>
-    </PageContainer>
+        <Link href="/contact">
+          <ContactButton> Make Contact</ContactButton>
+        </Link>
+      </PageContainer>
+    </>
   );
 }
 

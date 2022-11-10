@@ -13,28 +13,30 @@ export function ItemDetail2({ id }) {
   if (!detailItem2) return <p> loading second badge of items </p>;
 
   return (
-    <PageContainer>
+    <>
       <BurgerMenu />
-      <ItemHeadline>{detailItem2.name}</ItemHeadline>
-      <ItemImage
-        objectFit="cover"
-        src={detailItem2.img}
-        width={200}
-        heigth={200}
-        layout="fill"
-        alt="found items"
-      />
+      <PageContainer>
+        <ItemHeadline>{detailItem2.name}</ItemHeadline>
+        <ItemImage
+          objectFit="cover"
+          src={detailItem2.img}
+          width={200}
+          heigth={200}
+          layout="fill"
+          alt="found items"
+        />
 
-      <SectionHeadline>Description</SectionHeadline>
-      <Description>{detailItem2.description}</Description>
+        <SectionHeadline>Description</SectionHeadline>
+        <Description>{detailItem2.description}</Description>
 
-      <SectionHeadline>Location </SectionHeadline>
-      <LocationText>{detailItem2.location}</LocationText>
+        <SectionHeadline>Location </SectionHeadline>
+        <LocationText>{detailItem2.location}</LocationText>
 
-      <Link href="/contact">
-        <ContactButton> Make Contact</ContactButton>
-      </Link>
-    </PageContainer>
+        <Link href="/contact">
+          <ContactButton> Make Contact</ContactButton>
+        </Link>
+      </PageContainer>
+    </>
   );
 }
 
@@ -104,7 +106,7 @@ const ContactButton = styled.button`
   all: unset;
   color: white;
   border-radius: 2em;
-  transition: ease-out 0.9s;
+  transition: ease-out 0.5s;
   background-image: ${blueGradient};
   background-size: 400%;
   background-position: 0% 0%;

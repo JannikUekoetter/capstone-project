@@ -9,35 +9,37 @@ export default function SearchFound() {
   const [searchTerm2, setSearchTerm2] = useState("");
   const foundItems = useStore((state) => state.foundItems);
   return (
-    <Main>
+    <>
       <BurgerMenu />
-      <StyledHeadline>Found Items</StyledHeadline>
+      <Main>
+        <StyledHeadline>Found Items</StyledHeadline>
 
-      <label htmlFor="inputSearchBar2">
-        <StyledSearchBar
-          id="inputSearchBar2"
-          type="text"
-          placeholder="Search..."
-          onChange={(event) => setSearchTerm2(event.target.value)}
-        />
-      </label>
+        <label htmlFor="inputSearchBar2">
+          <StyledSearchBar
+            id="inputSearchBar2"
+            type="text"
+            placeholder="Search..."
+            onChange={(event) => setSearchTerm2(event.target.value)}
+          />
+        </label>
 
-      <StyledGrid>
-        {foundItems
-          .filter((foundItem) =>
-            foundItem.name.toLowerCase().includes(searchTerm2)
-          )
-          .map((foundItem) => (
-            <FoundItem
-              name={foundItem.name}
-              description={foundItem.description}
-              img={foundItem.img}
-              key={foundItem.id}
-              id={foundItem.id}
-            />
-          ))}
-      </StyledGrid>
-    </Main>
+        <StyledGrid>
+          {foundItems
+            .filter((foundItem) =>
+              foundItem.name.toLowerCase().includes(searchTerm2)
+            )
+            .map((foundItem) => (
+              <FoundItem
+                name={foundItem.name}
+                description={foundItem.description}
+                img={foundItem.img}
+                key={foundItem.id}
+                id={foundItem.id}
+              />
+            ))}
+        </StyledGrid>
+      </Main>
+    </>
   );
 }
 
