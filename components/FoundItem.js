@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
+import NavigationBar from "../components/NagivationBar";
 
 export default function FoundItem({ img, id }) {
   return (
@@ -32,6 +33,7 @@ const StyledImage = styled.img`
   border-radius: 3em;
   width: 12em;
   height: 12em;
+  padding: 0.8em;
 `;
 
 const StyledList = styled.li`

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStore } from "../../store/useStore";
 import { useRouter } from "next/router";
+import NavigationBar from "/components/NagivationBar";
 
 export default function AddLostItem() {
   const addLostItem = useStore((state) => state.addLostItem);
@@ -21,6 +22,7 @@ export default function AddLostItem() {
 
   return (
     <>
+      <NavigationBar />
       <StyledForm onSubmit={handleClick}>
         <Headline>Lost Something?</Headline>
         <br />
@@ -79,7 +81,7 @@ export default function AddLostItem() {
           accept="image/png, image/jpeg"
           src="/assets/MrBean.png"
         />
-
+        <br />
         <SubmitButton type="submit">Submit</SubmitButton>
       </StyledForm>
     </>
@@ -92,37 +94,36 @@ const StyledForm = styled.form`
 `;
 
 const Headline = styled.h1`
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
   background-image: radial-gradient(
     105.38% 477.9% at 82.97% -65.91%,
     #10c7ec 0%,
     #6d38cd 91.02%
   );
-  color: white;
-  border-radius: 0.5em;
-  height: 2em;
-  width: 10em;
-  margin-left: 0.8em;
-  text-align: center;
   background-size: 400%;
   background-position: 0% 0%;
-  position: relative;
-  font-size: 2em;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.8em 2.5em;
+  text-align: center;
+  place-self: center;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
 `;
 
 const SecondHeadline = styled.h2`
   all: unset;
   width: 2em;
-
   height: 1.5em;
   font-size: 1.2em;
   color: white;
   border-radius: 0.5em;
   outline: none;
-  background-image: radial-gradient(
-    105.38% 477.9% at 82.97% -65.91%,
-    #10c7ec 0%,
-    #6d38cd 91.02%
-  );
+  color: #555fd6;
+
   background-size: 400%;
   background-position: 0% 0%;
   padding: 0.5em;

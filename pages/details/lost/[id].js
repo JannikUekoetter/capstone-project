@@ -2,6 +2,7 @@ import { getItemByDatabaseId } from "../../../services/Db";
 import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
+import NavigationBar from "/components/NagivationBar";
 
 export function getServerSideProps(context) {
   return { props: { id: context.query.id } };
@@ -12,28 +13,29 @@ export function ItemDetail({ id }) {
   if (!detailItem) return <p> loading... </p>;
 
   return (
-    <PageContainer>
-      <ItemHeadline>{detailItem.name}</ItemHeadline>
-      <br />
-      <ItemImage
-        objectFit="cover"
-        src={detailItem.img}
-        width={200}
-        heigth={200}
-        layout="fill"
-        alt="lost items"
-      />
+    <>
+      <NavigationBar />
+      <PageContainer>
+        <ItemHeadline>{detailItem.name}</ItemHeadline>
+        <br />
+        <ItemImage
+          objectFit="cover"
+          src={detailItem.img}
+          width={200}
+          heigth={200}
+          layout="fill"
+          alt="lost items"
+        />
 
-      <SectionHeadline>Description</SectionHeadline>
-      <Description>{detailItem.description}</Description>
-      <SectionHeadline>Location</SectionHeadline>
+        <Description>{detailItem.description}</Description>
 
-      <LocationText>{detailItem.location}</LocationText>
+        <LocationText>{detailItem.location}</LocationText>
 
-      <Link href="/contact">
-        <ContactButton> Make Contact</ContactButton>
-      </Link>
-    </PageContainer>
+        <Link href="/contact">
+          <ContactButton>Contact</ContactButton>
+        </Link>
+      </PageContainer>
+    </>
   );
 }
 
