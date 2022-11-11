@@ -6,6 +6,33 @@ import Image from "next/image";
 export default function BurgerMenu() {
   return (
     <StyledDiv>
+      <StyledList>
+        <NavListItem>
+          <Link href="/">
+            <Anchor>Home</Anchor>
+          </Link>
+        </NavListItem>
+        <NavListItem>
+          <Link href="/searchlost">
+            <Anchor>Search Lost </Anchor>
+          </Link>
+        </NavListItem>
+        <NavListItem>
+          <Link href="/addlost">
+            <Anchor>Add Lost</Anchor>
+          </Link>
+        </NavListItem>
+        <NavListItem>
+          <Link href="/searchfound">
+            <Anchor>Search Found</Anchor>
+          </Link>
+        </NavListItem>
+        <NavListItem>
+          <Link href="/addfound">
+            <Anchor>Add Found</Anchor>
+          </Link>
+        </NavListItem>
+      </StyledList>
       <Logo
         objectFit="cover"
         src="/assets/logo/newlogo.png"
@@ -14,38 +41,6 @@ export default function BurgerMenu() {
         layout="fill"
         alt="lost items"
       />
-
-      <nav>
-        <StyledList className="nav__links">
-          <NavListItem>
-            {" "}
-            <Link href="/" className="#">
-              <Anchor>Home</Anchor>
-            </Link>
-          </NavListItem>
-          <NavListItem>
-            {" "}
-            <Link href="/searchlost" className="#">
-              <Anchor>Search Lost </Anchor>
-            </Link>
-          </NavListItem>
-          <NavListItem>
-            <Link href="/addlost" className="#">
-              <Anchor>Add Lost</Anchor>
-            </Link>
-          </NavListItem>
-          <NavListItem>
-            <Link href="/searchfound" className="#">
-              <Anchor>Search Found</Anchor>
-            </Link>
-          </NavListItem>
-          <NavListItem>
-            <Link href="/addfound" className="#">
-              <Anchor>Add Found</Anchor>
-            </Link>
-          </NavListItem>
-        </StyledList>
-      </nav>
     </StyledDiv>
   );
 }
@@ -82,11 +77,12 @@ const Anchor = styled.a`
   color: white;
   cursor: pointer;
   transition: ease-out 0.6s;
+
   padding: 0.1em;
 
   &:hover {
     box-shadow: inset 8em 0 0 0 darkblue;
-    border-radius: 0.6em;
+    border-radius: 0.4em;
   }
 `;
 

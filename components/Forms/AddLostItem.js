@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStore } from "../../store/useStore";
 import { useRouter } from "next/router";
-import BurgerMenu from "../BurgerMenu";
+import NavigationBar from "/components/NagivationBar";
 
 export default function AddLostItem() {
   const addLostItem = useStore((state) => state.addLostItem);
@@ -22,8 +22,8 @@ export default function AddLostItem() {
 
   return (
     <>
+      <NavigationBar />
       <StyledForm onSubmit={handleClick}>
-        <BurgerMenu />
         <Headline>Lost Something?</Headline>
         <br />
         <label>
@@ -100,7 +100,6 @@ const Headline = styled.h1`
     #6d38cd 91.02%
   );
   color: white;
-  color: white;
   height: 2em;
   border-radius: 0.2em;
   background-size: 400%;
@@ -112,7 +111,6 @@ const Headline = styled.h1`
 const SecondHeadline = styled.h2`
   all: unset;
   width: 2em;
-  opacity: 0.8Q;
   height: 1.5em;
   font-size: 1.2em;
   color: white;

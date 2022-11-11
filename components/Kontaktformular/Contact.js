@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import BurgerMenu from "../BurgerMenu";
+import NavigationBar from "/components/NagivationBar";
 
 export default function ContactPage() {
   return (
     <StyledContactArea>
-      <BurgerMenu />
+      <NavigationBar />
       <Headline>Make Contact</Headline>
       <label htmlFor="name">
         <StyledNameInput

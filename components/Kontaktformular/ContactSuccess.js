@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import BurgerMenu from "../BurgerMenu";
+import NavigationBar from "/components/NagivationBar";
 
 export default function ContactSuccess() {
   return (
     <>
-      <BurgerMenu />
+      <NavigationBar />
       <StyledSuccess>
         <StyledImage
           objectFit="cover"
@@ -36,7 +36,6 @@ const StyledImage = styled.img`
 `;
 
 const SuccessText = styled.p`
-  color: white;
   border-radius: 0.5em;
   height: 2em;
   text-align: center;
@@ -53,7 +52,6 @@ const SecondSuccessText = styled.p`
   width: 3em;
   height: 1.5em;
   font-size: 0.5em;
-  color: white;
   border-radius: 0.5em;
   outline: none;
   color: #555fd6;

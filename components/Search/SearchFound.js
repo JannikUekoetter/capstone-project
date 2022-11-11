@@ -3,14 +3,15 @@ import { useState } from "react";
 import FoundItem from "../FoundItem";
 import styled from "styled-components";
 import { useStore } from "../../store/useStore";
-import BurgerMenu from "../BurgerMenu";
+import NavigationBar from "../NagivationBar";
 
 export default function SearchFound() {
   const [searchTerm2, setSearchTerm2] = useState("");
   const foundItems = useStore((state) => state.foundItems);
   return (
     <>
-      <BurgerMenu />
+      <NavigationBar />
+
       <Main>
         <StyledHeadline>Found Items</StyledHeadline>
 

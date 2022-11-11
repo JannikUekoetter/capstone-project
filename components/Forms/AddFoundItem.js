@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStore } from "../../store/useStore";
 import { useRouter } from "next/router";
-import BurgerMenu from "../BurgerMenu";
+import NavigationBar from "/components/NagivationBar";
 
 export default function AddFoundItem() {
   {
@@ -22,34 +22,34 @@ export default function AddFoundItem() {
     };
     return (
       <>
+        <NavigationBar />
         <StyledForm onSubmit={handleClick}>
-          <BurgerMenu />
           <Headline>Found Something?</Headline>
-          <label>
-            <br />
-            <SecondHeadline>Tell us more</SecondHeadline>
-            <br />
-            <br />
-            <br />
-            <label htmlFor="name">
-              <StyledNameInput
-                name="name"
-                type="text"
-                placeholder="Name"
-                required
-              />
-            </label>
-            <br />
-            <br />
-            <StyledDescriptionInput
+
+          <br />
+          <SecondHeadline>Tell us more</SecondHeadline>
+          <br />
+          <br />
+          <br />
+          <label htmlFor="name">
+            <StyledNameInput
+              name="name"
               type="text"
-              name="description"
-              placeholder="Description"
-              rows="15"
-              cols="35"
+              placeholder="Name"
               required
             />
           </label>
+          <br />
+          <br />
+          <StyledDescriptionInput
+            type="text"
+            name="description"
+            placeholder="Description"
+            rows="15"
+            cols="35"
+            required
+          />
+
           <br />
           <label htmlFor="location">
             <br />
@@ -106,7 +106,6 @@ const Headline = styled.h1`
 const SecondHeadline = styled.h2`
   all: unset;
   width: 2em;
-  opacity: 0.8Q;
   height: 1.5em;
   font-size: 1.2em;
   color: white;
