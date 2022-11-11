@@ -50,7 +50,6 @@ const Main = styled.main`
 
 const StyledSearchBar = styled.input`
   all: unset;
-
   color: white;
   border-radius: 0.5em;
   background-image: linear-gradient(
@@ -64,6 +63,8 @@ const StyledSearchBar = styled.input`
   font-size: 1.5em;
   padding: 0.5em;
   cursor: pointer;
+  margin-bottom: 1em;
+  width: 75%;
 `;
 
 const StyledGrid = styled.ul`
@@ -73,11 +74,9 @@ const StyledGrid = styled.ul`
 `;
 
 const StyledHeadline = styled.h1`
-  all: unset;
-
   color: white;
   border-radius: 0.5em;
-  outline: none;
+  transition: ease-out 0.9s;
   background-image: radial-gradient(
     105.38% 477.9% at 82.97% -65.91%,
     #10c7ec 0%,
@@ -85,6 +84,12 @@ const StyledHeadline = styled.h1`
   );
   background-size: 400%;
   background-position: 0% 0%;
-  font-size: 1.3em;
-  padding: 0.5em;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.8em 2.5em;
+  text-align: center;
+  place-self: center;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
 `;

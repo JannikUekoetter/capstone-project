@@ -27,6 +27,10 @@ export default function Home() {
 
 const Main = styled.main`
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const StyledHeadline = styled.h1`
