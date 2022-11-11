@@ -71,8 +71,6 @@ const StyledGrid = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-
-  gap: 1em;
 `;
 
 const StyledHeadline = styled.h1`

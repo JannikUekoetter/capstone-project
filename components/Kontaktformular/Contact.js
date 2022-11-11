@@ -15,8 +15,7 @@ export default function ContactPage() {
           required
         ></StyledNameInput>
       </label>
-      <br />
-      <br />
+
       <label htmlFor="message">
         <StyledDescriptionInput
           placeholder="What's on your mind?"
@@ -25,8 +24,7 @@ export default function ContactPage() {
           required
         />
       </label>
-      <br />
-      <br />
+
       <div>
         <Link href="/success">
           <SubmitButton>Submit</SubmitButton>
@@ -38,6 +36,8 @@ export default function ContactPage() {
 
 const StyledContactArea = styled.form`
   text-align: center;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Headline = styled.h1`
@@ -54,8 +54,7 @@ const Headline = styled.h1`
   background-position: 0% 0%;
   position: relative;
   font-size: 2em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  white-space: pre;
 `;
 
 const StyledNameInput = styled.input`
@@ -69,7 +68,7 @@ const StyledNameInput = styled.input`
   border-radius: 1em;
   padding: 2em;
   line-height: 1.6;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 `;
 
 const StyledDescriptionInput = styled.input`

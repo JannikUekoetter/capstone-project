@@ -18,6 +18,8 @@ const GlobalStyle = createGlobalStyle`
   
       * {
           box-sizing: border-box;
+          padding: 0;
+          margin: 0;
       }
   
       body {
@@ -26,9 +28,10 @@ const GlobalStyle = createGlobalStyle`
           color: var(--text-primary);
       }
       main {
-        display: grid;
+        /* display: grid;
         align-items: center;
-        justify-content: center;
+        justify-content: center; */
+        margin: 0 auto;
         
       }
 

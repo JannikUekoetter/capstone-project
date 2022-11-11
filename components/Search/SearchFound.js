@@ -70,9 +70,6 @@ const StyledGrid = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  padding: 1em;
-  margin-left: 2em;
-  gap: 1em;
 `;
 
 const StyledHeadline = styled.h1`
@@ -88,6 +85,6 @@ const StyledHeadline = styled.h1`
   );
   background-size: 400%;
   background-position: 0% 0%;
-  font-size: 2em;
+  font-size: 1.3em;
   padding: 0.5em;
 `;
