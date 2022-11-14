@@ -37,7 +37,7 @@ export default function AddFoundItem() {
             <StyledNameInput
               name="name"
               type="text"
-              placeholder="Name"
+              placeholder="What have you lost?"
               required
             />
           </label>
@@ -47,7 +47,7 @@ export default function AddFoundItem() {
             name="description"
             placeholder="Description"
             rows="20"
-            cols="30"
+            cols="20"
             required
           />
 

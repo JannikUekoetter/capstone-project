@@ -36,7 +36,7 @@ export default function AddLostItem() {
             <StyledNameInput
               name="name"
               type="text"
-              placeholder="Name"
+              placeholder="What have you found?"
               required
             />
           </label>
