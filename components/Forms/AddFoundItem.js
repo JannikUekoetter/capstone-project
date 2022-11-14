@@ -46,8 +46,8 @@ export default function AddFoundItem() {
             type="text"
             name="description"
             placeholder="Description"
-            rows="15"
-            cols="35"
+            rows="20"
+            cols="30"
             required
           />
 
@@ -164,7 +164,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-const StyledDescriptionInput = styled.input`
+const StyledDescriptionInput = styled.textarea`
   all: unset;
 
   font-size: 0.9em;
@@ -178,6 +178,7 @@ const StyledDescriptionInput = styled.input`
   line-height: 1.6;
   height: 10em;
   margin-bottom: 2em;
+  word-break: break-word;
 `;
 
 const StyledNameInput = styled.input`
@@ -196,7 +197,8 @@ const StyledNameInput = styled.input`
 
 const SecondDescriptionHeadline = styled.p`
   all: unset;
-  width: 6em;
+  word-break: break-word;
+
   height: 1.5em;
   font-size: 1.2em;
   color: white;

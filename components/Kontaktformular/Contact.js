@@ -20,7 +20,7 @@ export default function ContactPage() {
         <StyledDescriptionInput
           placeholder="What's on your mind?"
           rows="15"
-          cols="35"
+          cols="30"
           required
         />
       </label>
@@ -75,7 +75,7 @@ const StyledNameInput = styled.input`
   margin-bottom: 3em;
 `;
 
-const StyledDescriptionInput = styled.input`
+const StyledDescriptionInput = styled.textarea`
   all: unset;
 
   font-size: 0.9em;
@@ -88,6 +88,8 @@ const StyledDescriptionInput = styled.input`
   padding: 2em;
   line-height: 1.6;
   height: 10em;
+  margin-bottom: 2em;
+  word-break: break-word;
 `;
 
 const SubmitButton = styled.button`

@@ -161,7 +161,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-const StyledDescriptionInput = styled.input`
+const StyledDescriptionInput = styled.textarea`
   all: unset;
 
   font-size: 0.9em;
@@ -175,6 +175,7 @@ const StyledDescriptionInput = styled.input`
   line-height: 1.6;
   height: 10em;
   margin-bottom: 2em;
+  word-break: break-word;
 `;
 
 const StyledNameInput = styled.input`
@@ -189,6 +190,7 @@ const StyledNameInput = styled.input`
   padding: 2em;
   line-height: 1.6;
   margin-bottom: 2em;
+  margin-top: 1em;
 `;
 
 const SecondDescriptionHeadline = styled.p`
