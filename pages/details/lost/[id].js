@@ -3,14 +3,17 @@ import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
 import NavigationBar from "/components/NagivationBar";
+import { useStore } from "../../../store/useStore";
 
 export function getServerSideProps(context) {
   return { props: { id: context.query.id } };
 }
 
 export function ItemDetail({ id }) {
-  const detailItem = getItemByDatabaseId(id);
-  if (!detailItem) return <p> loading... </p>;
+  const lostItems = useStore((state) => state.lostItems);
+  if (lostItems.filter((item) => item.id === id).length === 0)
+    return <p>loading!!!!</p>;
+  const detailItem = lostItems.filter((item) => item.id === id)[0];
 
   return (
     <>
@@ -24,7 +27,10 @@ export function ItemDetail({ id }) {
           width={200}
           heigth={200}
           layout="fill"
-          alt="lost items"
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null; // prevents looping
+            currentTarget.src = "/assets/MrBean.png";
+          }}
         />
 
         <Description>{detailItem.description}</Description>

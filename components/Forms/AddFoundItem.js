@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useStore } from "../../store/useStore";
 import { useRouter } from "next/router";
 import NavigationBar from "/components/NagivationBar";
+import { FaCloudUploadAlt } from "react-icons/fa";
 
 export default function AddFoundItem() {
   {
@@ -13,8 +14,12 @@ export default function AddFoundItem() {
       event.preventDefault();
       const formdata = new FormData(event.target);
       const data = Object.fromEntries(formdata);
+
+      const { picture } = data;
       const newFoundItem = {
         ...data,
+        img: URL.createObjectURL(picture),
+
         id: Math.random().toString(36).substring(2),
       };
       addFoundItem(newFoundItem);
@@ -26,61 +31,51 @@ export default function AddFoundItem() {
         <StyledForm onSubmit={handleClick}>
           <Headline>Found Something?</Headline>
 
-          <br />
           <SecondHeadline>Tell us more</SecondHeadline>
-          <br />
-          <br />
-          <br />
+
           <label htmlFor="name">
             <StyledNameInput
               name="name"
               type="text"
-              placeholder="Name"
+              placeholder="What have you lost?"
               required
             />
           </label>
-          <br />
-          <br />
+
           <StyledDescriptionInput
             type="text"
             name="description"
             placeholder="Description"
-            rows="15"
-            cols="35"
+            rows="20"
+            cols="20"
             required
           />
 
-          <br />
           <label htmlFor="location">
-            <br />
-            <br />
-            <SecondHeadline>Whats your location?</SecondHeadline>
-            <br />
-            <br />
-            <br />
+            <SecondDescriptionHeadline>
+              Whats your location?
+            </SecondDescriptionHeadline>
+
             <StyledLocationInput
               name="location"
               type="text"
               placeholder="Location"
               required
             />
-            <br />
           </label>
-          <br />
-          <br />
-          <label htmlFor="picture">
-            <SecondHeadline>Upload a Picture</SecondHeadline>
-            <br />
-            <br />
-          </label>
-          <input
-            name="picture"
-            type="file"
-            id="picture"
-            accept="image/png, image/jpeg"
-            src="/assets/MrBean.png"
-          />
-          <br />
+          <PictureUpload>
+            <label htmlFor="picture">
+              <FaCloudUploadAlt />
+            </label>
+            <input
+              name="picture"
+              type="file"
+              id="picture"
+              accept="image/png, image/jpeg"
+              src="/assets/MrBean.png"
+              hidden
+            />
+          </PictureUpload>
           <SubmitButton type="submit">Submit</SubmitButton>
         </StyledForm>
       </>
@@ -99,7 +94,7 @@ const Headline = styled.h1`
   );
   background-size: 400%;
   background-position: 0% 0%;
-  font-size: 1.4em;
+  font-size: 1.3em;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding: 0.8em 2.5em;
@@ -111,7 +106,7 @@ const Headline = styled.h1`
 
 const SecondHeadline = styled.h2`
   all: unset;
-  width: 2em;
+  width: 6em;
   height: 1.5em;
   font-size: 1.2em;
   color: white;
@@ -126,6 +121,9 @@ const SecondHeadline = styled.h2`
 const StyledForm = styled.form`
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const StyledLocationInput = styled.input`
@@ -139,6 +137,8 @@ const StyledLocationInput = styled.input`
   border-radius: 1em;
   padding: 2em;
   line-height: 1.6;
+  margin-bottom: 1em;
+  margin-top: 1em;
 `;
 
 const SubmitButton = styled.button`
@@ -164,7 +164,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-const StyledDescriptionInput = styled.input`
+const StyledDescriptionInput = styled.textarea`
   all: unset;
 
   font-size: 0.9em;
@@ -177,6 +177,8 @@ const StyledDescriptionInput = styled.input`
   padding: 2em;
   line-height: 1.6;
   height: 10em;
+  margin-bottom: 2em;
+  word-break: break-word;
 `;
 
 const StyledNameInput = styled.input`
@@ -190,4 +192,45 @@ const StyledNameInput = styled.input`
   border-radius: 1em;
   padding: 2em;
   line-height: 1.6;
+  margin-bottom: 2em;
+`;
+
+const SecondDescriptionHeadline = styled.p`
+  all: unset;
+  word-break: break-word;
+
+  height: 1.5em;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 0.5em;
+  outline: none;
+  color: #555fd6;
+  background-size: 400%;
+  background-position: 0% 0%;
+  padding: 0.5em;
+`;
+
+const PictureUpload = styled.div`
+  color: white;
+  border-radius: 0.5em;
+  transition: ease-out 0.9s;
+  background-image: radial-gradient(
+    105.38% 477.9% at 82.97% -65.91%,
+    #10c7ec 0%,
+    #6d38cd 91.02%
+  );
+  background-size: 400%;
+  background-position: 0% 0%;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.8em 2.5em;
+  text-align: center;
+  place-self: center;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  &:hover {
+    box-shadow: inset 8em 0 0 0 darkblue;
+  }
 `;
