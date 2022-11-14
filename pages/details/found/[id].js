@@ -3,15 +3,17 @@ import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
 import NavigationBar from "/components/NagivationBar";
+import { useStore } from "../../../store/useStore";
 
 export function getServerSideProps(context) {
   return { props: { id: context.query.id } };
 }
 
 export function ItemDetail2({ id }) {
-  const detailItem2 = getItemByDatabaseIdv2(id);
-  if (!detailItem2) return <p> loading second badge of items </p>;
-
+  const foundItems = useStore((state) => state.foundItems);
+  if (foundItems.filter((item) => item.id === id).length === 0)
+    return <p>loading error.</p>;
+  const detailItem2 = foundItems.filter((item) => item.id === id)[0];
   return (
     <>
       <NavigationBar />

@@ -60,6 +60,7 @@ const StyledDiv = styled.div`
   border-radius: 1em;
   margin-bottom: 1em;
   width: 100%;
+  margin-top: -0.7em;
 `;
 
 const StyledList = styled.ul`

@@ -15,7 +15,7 @@ export default function LostItem({ img, id }) {
               width={200}
               heigth={200}
               layout="fill"
-              alt="lost items"
+              alt="No picture posted."
             />
           </Link>
         </ImageContainer>

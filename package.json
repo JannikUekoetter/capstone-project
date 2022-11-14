@@ -10,6 +10,8 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "cloudinary": "^1.32.0",
+    "formidable": "^2.0.1",
     "leaflet": "^1.9.2",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "nanoid": "^4.0.0",
